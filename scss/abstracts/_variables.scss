@@ -1,0 +1,37 @@
+/* stylelint-disable scss/operator-no-unspaced */
+
+/* fonts */
+
+// font-family
+$main-font-family: Roboto, Arial, sans-serif;
+$heading-font-family: Forum, serif;
+
+// font-size, line-height and letter spacing
+$normal-font-size: 28px/1.18;
+$normal-letter-spacing: 2px;
+$link-font-size: 22px/2.27;
+$extra-little-font-size: 18px/1.17;
+$little-font-size: 22px/1.18;
+$common-text-font-size: 22px/1.75;
+$main-heading-font-size: 80px/1.12;
+$subheading-font-size: 32px/1.09;
+$heading-letter-spacing: 5px;
+
+// font-styles
+$normal-font-style: normal;
+
+// font-weight
+$extra-light-font-weight: 200;
+$light-font-weight: 300;
+$normal-font-weight: 400;
+$medium-font-weight: 500;
+$bold-font-weight: 700;
+
+/* colors */
+$white-color: #fff;
+$light-brown-color: #9d8665;
+$black-color: #000;
+$brown-color: #710707;
+$semi-brown-color: #caaa7d;
+$black-background-color: #030303;
+$body-background-color: #e5e5e5;

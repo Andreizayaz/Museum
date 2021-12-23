@@ -1,0 +1,38 @@
+/* stylelint-disable no-eol-whitespace */
+
+/* stylelint-disable at-rule-no-unknown */
+@mixin text($color, $fontSize, $fontWeight, 
+$fontFamily:(Roboto, Arial, sans-serif), 
+$textAling:left,
+$textTransform:none) {
+  color: $color;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  text-align: $textAling;
+  text-transform: $textTransform;
+}
+
+@mixin row-flexbox() {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+@mixin center-item-with-flexbox() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin border($border:none, $borderRadius:0) {
+  border: $border;
+  border-radius: $borderRadius;
+}
+
+@mixin block-size($margin:0, $height:auto, $width:auto, $padding:0) {
+  margin: $margin;
+  height: $height;
+  width: $width;
+  padding: $padding;
+}
