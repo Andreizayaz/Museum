@@ -13,7 +13,7 @@ $link-font-size: 22px/2.27;
 $extra-little-font-size: 18px/1.17;
 $little-font-size: 22px/1.18;
 $common-text-font-size: 22px/1.75;
-$main-heading-font-size: 80px/1.12;
+$section-heading-font-size: 80px/1.12;
 $subheading-font-size: 32px/1.09;
 $heading-letter-spacing: 5px;
 
@@ -37,10 +37,10 @@ $black-background-color: #030303;
 $wight-brown-color: #e5e5e5;
 
 /* colors variables assignment */
-$main-color: $white-color;
+$odd-section-color: $white-color;
 $button-and-border-color: $brown-color;
 $heading-color: $light-brown-color;
-$main-inverse-color: $black-color;
+$even-section-color: $black-color;
 $highlight-text-color: $semi-brown-color;
 $odd-section-background-color: $black-background-color;
 $body-background-color: $wight-brown-color;
