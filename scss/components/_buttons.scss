@@ -1,3 +1,17 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
 .button {
-  
+  display: block;
+  @include text(inherit, $little-font-size, $extra-light-font-weight, inherit, center);
+
+  transition: all 1s;
+
+  &_color {
+    background-color: $button-and-border-color;
+  }
+
+  &:hover {
+    background-color: $light-brown-color;
+  }
 }
