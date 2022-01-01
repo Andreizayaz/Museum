@@ -1,0 +1,6 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.link {
+  @include text($link-color, $link-font-size, $extra-light-font-weight, inherit, center);
+}

@@ -1,0 +1,5 @@
+@import "../abstracts/mixins";
+
+.menu {
+  @include row-flexbox(center, space-between);
+}

@@ -3,26 +3,21 @@
 /* stylelint-disable at-rule-no-unknown */
 @mixin text($color, $fontSize, $fontWeight, 
 $fontFamily:(Roboto, Arial, sans-serif), 
-$textAling:left,
+$textAlign:left,
 $textTransform:none) {
   color: $color;
   font-family: $fontFamily;
   font-size: $fontSize;
   font-weight: $fontWeight;
-  text-align: $textAling;
+  text-align: $textAlign;
   text-transform: $textTransform;
 }
 
-@mixin row-flexbox() {
+@mixin row-flexbox($alignItems:center, $justifyContent:center) {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-}
-
-@mixin center-item-with-flexbox() {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
 }
 
 @mixin border($border:none, $borderRadius:0) {

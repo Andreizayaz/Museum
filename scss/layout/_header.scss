@@ -1,0 +1,18 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.header {
+  padding: 75px 0;
+  background-color: $black-background-color;
+
+  &__container {
+    @include row-flexbox(center, space-between);
+  }
+
+  &__logo {
+    margin-right: auto;
+    height: 50px;
+    width: 195px;
+    background-image: url("../assets/svg/01_logo.svg");
+  }
+}

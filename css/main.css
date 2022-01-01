@@ -1,22 +1,90 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
+  border: 0;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -25,8 +93,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -34,17 +111,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: none;
 }
 
@@ -53,19 +133,20 @@ table {
   border-spacing: 0;
 }
 
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration {
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   -webkit-appearance: none;
-  -moz-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
-input[type=search] {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          appearance: none;
 }
 
 textarea {
@@ -81,9 +162,8 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   max-width: 100%;
+  *zoom: 1;
 }
 
 /**
@@ -113,8 +193,9 @@ html {
   font-size: 100%;
   /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -ms-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   /* 2 */
 }
 
@@ -138,10 +219,9 @@ a:hover {
  * 2. Improve image quality when scaled in IE 7.
  */
 img {
+  vertical-align: middle;
   border: 0;
   /* 1 */
-  -ms-interpolation-mode: bicubic;
-  /* 2 */
 }
 
 /**
@@ -162,9 +242,9 @@ form {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: .35em .625em .75em;
+  border: 1px solid #c0c0c0;
 }
 
 /**
@@ -173,13 +253,13 @@ fieldset {
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
 legend {
-  border: 0;
-  /* 1 */
+  *margin-left: -7px;
+  /* 3 */
   padding: 0;
   white-space: normal;
   /* 2 */
-  *margin-left: -7px;
-  /* 3 */
+  border: 0;
+  /* 1 */
 }
 
 /**
@@ -192,14 +272,18 @@ button,
 input,
 select,
 textarea {
-  font-size: 100%;
-  /* 1 */
   margin: 0;
   /* 2 */
+  font-size: 100%;
+  /* 1 */
   vertical-align: baseline;
   /* 3 */
-  *vertical-align: middle;
-  /* 3 */
+  border: none;
+  outline: none;
+}
+
+button {
+  background-color: transparent;
 }
 
 /**
@@ -235,12 +319,14 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
   *overflow: visible;
   /* 4 */
+  cursor: pointer;
+  /* 3 */
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  /* 2 */
 }
 
 /**
@@ -259,28 +345,15 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
   *height: 13px;
   /* 3 */
   *width: 13px;
   /* 3 */
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -webkit-box-sizing: content-box;
+  padding: 0;
   /* 2 */
-  box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
 }
 
 /**
@@ -290,36 +363,12 @@ input[type="search"] {
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+          appearance: none;
 }
 
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * 1. Remove default vertical scrollbar in IE 6/7/8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */
-}
-
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 html,
 button,
 input,
@@ -328,34 +377,193 @@ textarea {
   color: #222;
 }
 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
 ::-moz-selection {
-  background: #b3d4fc;
   text-shadow: none;
+  background: #b3d4fc;
 }
 
 ::selection {
-  background: #b3d4fc;
   text-shadow: none;
-}
-
-img {
-  vertical-align: middle;
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  resize: vertical;
+  background: #b3d4fc;
 }
 
 .chromeframe {
-  margin: 0.2em 0;
-  background: #ccc;
+  margin: .2em 0;
+  padding: .2em 0;
   color: #000;
-  padding: 0.2em 0;
+  background: #ccc;
+}
+
+@font-face {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/Forum/forum-regular-webfont.woff2"), url("../../assets/fonts/Forum/forum-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  src: url("../../assets/fonts/Roboto/roboto-regular-webfont.woff2"), url("../../assets/fonts/Roboto/roboto-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../../assets/fonts/Roboto/roboto-regular-webfont.woff2"), url("../../assets/fonts/Roboto/roboto-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../assets/fonts/Roboto/roboto-regular-webfont.woff2"), url("../../assets/fonts/Roboto/roboto-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/Roboto/roboto-regular-webfont.woff2"), url("../../assets/fonts/Roboto/roboto-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/Roboto/roboto-regular-webfont.woff2"), url("../../assets/fonts/Roboto/roboto-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/Roboto/roboto-bold-webfont.woff2"), url("../../assets/fonts/Roboto/roboto-bold-webfont.woff");
+}
+
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable scss/operator-no-unspaced */
+/* fonts */
+/* colors */
+/* colors variables assignment */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Roboto, Arial, sans-serif;
+  text-align: left;
+  background-color: #e5e5e5;
+}
+
+h1,
+h2 {
+  color: inherit;
+  font-family: Forum, serif, serif;
+  font-size: 71.42857px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h2::after {
+  margin-top: 25px;
+  width: 100%;
+  border-bottom: 3px solid #710707;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+section {
+  padding: 75px 0;
+}
+
+section:nth-child(odd) {
+  color: #fff;
+  background-color: #030303;
+}
+
+section:nth-child(even) {
+  color: #000;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1460px;
+  padding: 10px;
+}
+
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable scss/operator-no-unspaced */
+/* fonts */
+/* colors */
+/* colors variables assignment */
+.button {
+  display: block;
+  color: inherit;
+  font-family: inherit;
+  font-size: 18.64407px;
+  font-weight: 200;
+  text-align: center;
+  text-transform: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.button_color {
+  background-color: #710707;
+}
+
+.button:hover {
+  background-color: #9d8665;
+}
+
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable scss/operator-no-unspaced */
+/* fonts */
+/* colors */
+/* colors variables assignment */
+.header {
+  padding: 75px 0;
+  background-color: #030303;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  margin-right: auto;
+  height: 50px;
+  width: 195px;
+  background-image: url("../assets/svg/01_logo.svg");
 }
 /*# sourceMappingURL=main.css.map */
