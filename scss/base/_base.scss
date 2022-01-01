@@ -13,6 +13,17 @@ body {
   background-color: $body-background-color;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 h1,
 h2 {
   @include text(inherit, $section-heading-font-size, $normal-font-weight, ($heading-font-family, serif), left, uppercase);
@@ -31,6 +42,10 @@ img {
   max-height: 100%;
 }
 
+li {
+  list-style: none;
+}
+
 section {
   padding: 75px 0;
 
@@ -45,6 +60,7 @@ section {
 }
 
 .container {
+  margin: 0 auto;
   max-width: 1460px;
   padding: 10px;
 }
