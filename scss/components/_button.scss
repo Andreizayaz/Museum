@@ -3,7 +3,7 @@
 
 .button {
   display: block;
-  @include text(inherit, $little-font-size, $extra-light-font-weight, inherit, center);
+  @include text(inherit, $little-font-size, $little-line-height, $extra-light-font-weight, inherit, center);
 
   transition: all 1s;
 

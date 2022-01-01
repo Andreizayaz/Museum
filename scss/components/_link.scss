@@ -2,5 +2,6 @@
 @import "../abstracts/variables";
 
 .link {
-  @include text($link-color, $link-font-size, $extra-light-font-weight, inherit, center);
+  @include text($link-color, $link-font-size,
+  $link-line-height, $extra-light-font-weight, inherit, center, none, $normal-letter-spacing);
 }

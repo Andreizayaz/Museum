@@ -1,6 +1,10 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -26,7 +30,7 @@ button {
 
 h1,
 h2 {
-  @include text(inherit, $section-heading-font-size, $normal-font-weight, ($heading-font-family, serif), left, uppercase);
+  @include text(inherit, $section-heading-font-size, $section-heading-line-height, $normal-font-weight, ($heading-font-family, serif), left, uppercase);
 }
 
 h2 {
@@ -62,5 +66,5 @@ section {
 .container {
   margin: 0 auto;
   max-width: 1460px;
-  padding: 10px;
+  padding: 0 10px;
 }

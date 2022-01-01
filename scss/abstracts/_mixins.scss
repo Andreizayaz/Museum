@@ -1,14 +1,16 @@
 /* stylelint-disable no-eol-whitespace */
 
 /* stylelint-disable at-rule-no-unknown */
-@mixin text($color, $fontSize, $fontWeight, 
+@mixin text($color, $fontSize, $lineHeight, $fontWeight, 
 $fontFamily:(Roboto, Arial, sans-serif), 
 $textAlign:left,
-$textTransform:none) {
+$textTransform:none, $letterSpacing:$normal-letter-spacing) {
   color: $color;
   font-family: $fontFamily;
   font-size: $fontSize;
   font-weight: $fontWeight;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
   text-align: $textAlign;
   text-transform: $textTransform;
 }

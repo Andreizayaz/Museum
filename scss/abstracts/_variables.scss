@@ -7,14 +7,21 @@ $main-font-family: Roboto, Arial, sans-serif;
 $heading-font-family: Forum, serif;
 
 // font-size, line-height and letter spacing
-$normal-font-size: 28px/1.18;
+$normal-font-size: 28px;
+$normal-line-height: 1.18;
 $normal-letter-spacing: 2px;
-$link-font-size: 22px/2.27;
-$extra-little-font-size: 18px/1.17;
-$little-font-size: 22px/1.18;
-$common-text-font-size: 22px/1.75;
-$section-heading-font-size: 80px/1.12;
+$link-font-size: 22px;
+$link-line-height: 2.27;
+$extra-little-font-size: 18px;
+$extra-little-line-height: 1.17;
+$little-font-size: 22px;
+$little-line-height: 1.18;
+$common-text-font-size: 22px;
+$common-text-line-height: 1.75;
+$section-heading-font-size: 80px;
+$section-heading-line-height: 1.12;
 $subheading-font-size: 32px/1.09;
+$subheading-line-height: 32px/1.09;
 $heading-letter-spacing: 5px;
 
 // font-styles
