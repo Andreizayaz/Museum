@@ -30,7 +30,7 @@ button {
 
 h1,
 h2 {
-  @include text(inherit, $section-heading-font-size, $section-heading-line-height, $normal-font-weight, ($heading-font-family, serif), left, uppercase);
+  @include text(inherit, $section-heading-font-size, $section-heading-line-height, $normal-font-weight, ($heading-font-family, serif), left, uppercase, $heading-letter-spacing);
 }
 
 h2 {
@@ -51,7 +51,9 @@ li {
 }
 
 section {
-  padding: 75px 0;
+  &:not(.welcome) {
+    padding: 75px 0;
+  }
 
   &:nth-child(odd) {
     color: $odd-section-color;

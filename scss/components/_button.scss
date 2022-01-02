@@ -11,6 +11,11 @@
     background-color: $button-and-border-color;
   }
 
+  &_discover {
+    background-color: $button-and-border-color;
+    @include border(10px);
+  }
+
   &:hover {
     background-color: $light-brown-color;
   }

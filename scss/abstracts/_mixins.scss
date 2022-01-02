@@ -22,7 +22,7 @@ $textTransform:none, $letterSpacing:$normal-letter-spacing) {
   justify-content: $justifyContent;
 }
 
-@mixin border($border:none, $borderRadius:0) {
+@mixin border($borderRadius:0, $border:none) {
   border: $border;
   border-radius: $borderRadius;
 }

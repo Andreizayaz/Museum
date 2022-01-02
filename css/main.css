@@ -490,7 +490,7 @@ h2 {
   font-size: 80px;
   font-weight: 400;
   line-height: 1.12;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   text-align: left;
   text-transform: uppercase;
 }
@@ -510,7 +510,7 @@ li {
   list-style: none;
 }
 
-section {
+section:not(.welcome) {
   padding: 75px 0;
 }
 
@@ -527,6 +527,75 @@ section:nth-child(even) {
   margin: 0 auto;
   max-width: 1460px;
   padding: 0 10px;
+}
+
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable scss/operator-no-unspaced */
+/* fonts */
+/* colors */
+/* colors variables assignment */
+.button {
+  display: block;
+  color: inherit;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 1.18;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.button_color {
+  background-color: #710707;
+}
+
+.button_discover {
+  background-color: #710707;
+  border: none;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #9d8665;
+}
+
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable scss/operator-no-unspaced */
+/* fonts */
+/* colors */
+/* colors variables assignment */
+.link {
+  color: #fff;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 2.27;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: none;
+}
+
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable at-rule-no-unknown */
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* stylelint-disable no-eol-whitespace */
@@ -577,32 +646,8 @@ section:nth-child(even) {
   display: block;
 }
 
-/* stylelint-disable no-eol-whitespace */
-/* stylelint-disable at-rule-no-unknown */
-/* stylelint-disable scss/operator-no-unspaced */
-/* fonts */
-/* colors */
-/* colors variables assignment */
-.button {
-  display: block;
-  color: inherit;
-  font-family: inherit;
-  font-size: 22px;
-  font-weight: 200;
-  line-height: 1.18;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: none;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.button_color {
-  background-color: #710707;
-}
-
-.button:hover {
-  background-color: #9d8665;
+.main__welcome {
+  position: relative;
 }
 
 /* stylelint-disable no-eol-whitespace */
@@ -611,20 +656,7 @@ section:nth-child(even) {
 /* fonts */
 /* colors */
 /* colors variables assignment */
-.link {
-  color: #fff;
-  font-family: inherit;
-  font-size: 22px;
-  font-weight: 200;
-  line-height: 2.27;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: none;
-}
-
-/* stylelint-disable no-eol-whitespace */
-/* stylelint-disable at-rule-no-unknown */
-.menu {
+.welcome__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -632,11 +664,50 @@ section:nth-child(even) {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+}
+
+.welcome__column-1 {
+  z-index: 1;
+  width: 41.5%;
+  padding-top: 114px;
+  padding-bottom: 246px;
+}
+
+.welcome__heading {
+  margin-bottom: 26px;
+}
+
+.welcome__text {
+  margin-bottom: 76px;
+}
+
+.welcome__button {
+  padding: 29px 65px;
+}
+
+.welcome__column-2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 63.3%;
+  background-image: url("../assets/img/01_Background_images/01_welcome_section_background.png");
+}
+
+.text {
+  color: inherit;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: 2px;
+  text-align: left;
+  text-transform: none;
 }
 /*# sourceMappingURL=main.css.map */

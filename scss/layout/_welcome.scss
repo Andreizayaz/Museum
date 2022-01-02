@@ -1,0 +1,40 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.welcome {
+  &__container {
+    @include row-flexbox(normal, normal);
+  }
+
+  &__column-1 {
+    z-index: 1;
+    width: 41.5%;
+    padding-top: 114px;
+    padding-bottom: 246px;
+  }
+
+  &__heading {
+    margin-bottom: 26px;
+  }
+
+  &__text {
+    margin-bottom: 76px;
+  }
+
+  &__button {
+    padding: 29px 65px;
+  }
+
+  &__column-2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 63.3%;
+    background-image: url("../assets/img/01_Background_images/01_welcome_section_background.png");
+  }
+}
+
+.text {
+  @include text(inherit, $normal-font-size, $normal-line-height, $light-font-weight);
+}
