@@ -1,0 +1,50 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.explore {
+  &__container {
+    @include row-flexbox(normal, space-between);
+  }
+
+  &__column {
+    &:first-child {
+      width: 46%;
+    }
+
+    &:last-child {
+      width: 50%;
+      padding-top: 15px;
+
+      .picture {
+        background-image: url("../assets/img/03_Explore_section/01_item.jpg");
+      }
+    }
+  }
+
+  &__picture {
+    height: 700px;
+    width: 100%;
+  }
+
+  &__row {
+    margin-top: 80px;
+  }
+}
+
+.picture-description {
+  @include text(inherit, $common-text-font-size, $common-text-line-height, $light-font-weight, inherit, left, none, 0);
+
+  &__heading {
+    margin-bottom: 39px;
+  }
+
+  &__text {
+    &:first-child {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__highlight {
+    color: $highlight-text-color;
+  }
+}
