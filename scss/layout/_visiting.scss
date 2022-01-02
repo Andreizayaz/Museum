@@ -1,0 +1,69 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.visiting {
+  &__container {
+    @include column-flexbox;
+  }
+
+  &__row {
+    &:first-child {
+      margin-bottom: 75px;
+    }
+  }
+
+  &__heading {
+    color: $heading-color;
+  }
+}
+
+.items-container {
+  @include row-flexbox(normal, space-between);
+
+  &__item {
+    gap: 60px;
+    width: 30.6%;
+
+    &:nth-child(n+3) {
+      margin-bottom: 77px;
+    }
+  }
+}
+
+.item {
+  &__image {
+    margin-bottom: 25px;
+    height: 285px;
+    width: 100%;
+  }
+
+  &__heading {
+    @include text($black-color, $subheading-font-size, $subheading-line-height, $normal-font-weight, (Forum, serif), left, uppercase, $heading-letter-spacing);
+
+    &::after {
+      @include after-element(block, 9px, 68%, (2px solid $button-and-border-color));
+    }
+  }
+
+  &__description {
+    margin-top: 10px;
+  }
+
+  .text {
+    @include text($even-section-color, $common-text-font-size, $little-line-height, $extra-light-font-weight, (Roboto, Arial, sans-serif), left, none, 0);
+
+    &__top,
+    &__bottom {
+      display: block;
+    }
+
+    &__top {
+      margin-bottom: 10px;
+    }
+
+    &__bottom {
+      font-size: $extra-little-font-size;
+      line-height: $extra-little-line-height;
+    }
+  }
+}

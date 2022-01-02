@@ -496,9 +496,11 @@ h2 {
 }
 
 h2::after {
-  margin-top: 25px;
+  display: block;
+  margin-top: 26px;
   width: 100%;
   border-bottom: 3px solid #710707;
+  content: " ";
 }
 
 img {
@@ -638,6 +640,7 @@ section:nth-child(even) {
 }
 
 .menu__item {
+  gap: 76px;
   width: 15%;
   padding: 0 10px;
 }
@@ -676,7 +679,7 @@ section:nth-child(even) {
   z-index: 1;
   width: 41.5%;
   padding-top: 114px;
-  padding-bottom: 246px;
+  padding-bottom: 240px;
 }
 
 .welcome__heading {
@@ -709,5 +712,107 @@ section:nth-child(even) {
   letter-spacing: 2px;
   text-align: left;
   text-transform: none;
+}
+
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable scss/operator-no-unspaced */
+/* fonts */
+/* colors */
+/* colors variables assignment */
+.visiting__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.visiting__row:first-child {
+  margin-bottom: 75px;
+}
+
+.visiting__heading {
+  color: #9d8665;
+}
+
+.items-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.items-container__item {
+  gap: 60px;
+  width: 30.6%;
+}
+
+.items-container__item:nth-child(n+3) {
+  margin-bottom: 77px;
+}
+
+.item__image {
+  margin-bottom: 25px;
+  height: 285px;
+  width: 100%;
+}
+
+.item__heading {
+  color: #000;
+  font-family: Forum, serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.09;
+  letter-spacing: 5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.item__heading::after {
+  display: block;
+  margin-top: 9px;
+  width: 68%;
+  border-bottom: 2px solid #710707;
+  content: " ";
+}
+
+.item__description {
+  margin-top: 10px;
+}
+
+.item .text {
+  color: #000;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 1.18;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: none;
+}
+
+.item .text__top, .item .text__bottom {
+  display: block;
+}
+
+.item .text__top {
+  margin-bottom: 10px;
+}
+
+.item .text__bottom {
+  font-size: 18px;
+  line-height: 1.17;
 }
 /*# sourceMappingURL=main.css.map */

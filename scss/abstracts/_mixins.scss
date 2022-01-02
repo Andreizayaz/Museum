@@ -22,9 +22,22 @@ $textTransform:none, $letterSpacing:$normal-letter-spacing) {
   justify-content: $justifyContent;
 }
 
+@mixin column-flexbox() {
+  display: flex;
+  flex-direction: column;
+}
+
 @mixin border($borderRadius:0, $border:none) {
   border: $border;
   border-radius: $borderRadius;
+}
+
+@mixin after-element($displayElement:block, $marginTop: 0, $widthElement:auto, $borderBottom:none, $contentElement:" ") {
+  display: $displayElement;
+  margin-top: $marginTop;
+  width: $widthElement;
+  border-bottom: $borderBottom;
+  content: $contentElement;
 }
 
 @mixin block-size($margin:0, $height:auto, $width:auto, $padding:0) {

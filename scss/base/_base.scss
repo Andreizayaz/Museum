@@ -35,9 +35,7 @@ h2 {
 
 h2 {
   &::after {
-    margin-top: 25px;
-    width: 100%;
-    border-bottom: 3px solid $button-and-border-color;
+    @include after-element(block, 26px, 100%, (3px solid $button-and-border-color));
   }
 }
 
