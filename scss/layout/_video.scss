@@ -1,0 +1,134 @@
+/* stylelint-disable property-no-vendor-prefix */
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.video {
+  padding: 90px 0 75px;
+
+  &__frame {
+    margin-bottom: 41px;
+    width: 100%;
+  }
+
+  &__row {
+    @include row-flexbox(flex-start, space-between);
+  }
+
+  &__column {
+    &:first-child {
+      width: 43%;
+    }
+
+    &:last-child {
+      width: 50%;
+    }
+  }
+
+  &__heading {
+    color: $heading-color;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &__description {
+    @include text($even-section-color, $common-text-font-size, 1.77, $light-font-weight, inherit, left, none, 0);
+  }
+}
+
+.frame {
+  &__view {
+    @include row-flexbox;
+
+    height: 629px;
+    width: 100%;
+    background-image: url("../../assets/img/04_Video_section/01_Video_poster.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__toolbar {
+    @include row-flexbox(normal, space-between);
+
+    padding: 0 41px;
+    background-color: $even-section-color;
+  }
+
+  &__video-manage-container {
+    @include row-flexbox(center, space-between);
+
+    width: 12%;
+  }
+
+  &__video-manage-container,
+  &__video-progress,
+  &__volume-progress,
+  &__resize-screen {
+    gap: 41px;
+  }
+
+  &__video-progress {
+    width: 60.4%;
+    padding: 35px 0;
+  }
+
+  &__video-progress-range {
+    height: 8px;
+    width: 100%;
+    background: linear-gradient(to right, $fill-gradient-color 0%, $fill-gradient-color 47%, $blank-gradient-color 47%, $blank-gradient-color 100%);
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-thumb {
+      height: 15px;
+      width: 15px;
+      background: $cursor-color;
+      border-radius: 50%;
+      cursor: ew-resize;
+      -webkit-appearance: none;
+    }
+  }
+
+  &__volume-progress {
+    @include row-flexbox(center, space-between);
+
+    width: 15.7%;
+    padding: 28px 0;
+
+    &__item {
+      gap: 20px;
+    }
+  }
+
+  &__volume-progress-range {
+    height: 8px;
+    width: 72.7%;
+    background: linear-gradient(to right, $fill-gradient-color 0%, $fill-gradient-color 43%, $blank-gradient-color 43%, $blank-gradient-color 100%);
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-thumb {
+      height: 15px;
+      width: 15px;
+      background: $cursor-color;
+      border-radius: 50%;
+      cursor: ew-resize;
+      -webkit-appearance: none;
+    }
+  }
+
+  &__resize-screen {
+    padding: 25px 0;
+  }
+}
+
+.video-manage-container {
+  padding: 28px 0;
+
+  &__item {
+    gap: 41px;
+  }
+}

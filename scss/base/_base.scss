@@ -21,6 +21,7 @@ a {
 }
 
 button {
+  padding: 0;
   background-color: transparent;
   border: none;
   outline: none;
@@ -47,7 +48,7 @@ li {
 }
 
 section {
-  &:not(.welcome) {
+  &:not(.welcome):not(.video) {
     padding: 75px 0;
   }
 
