@@ -221,6 +221,80 @@
       </div>
       </div>
     </section>
+    <section class="tickets">
+      <div class="container">
+        <div class="tickets__row">
+          <h2 class="tickets__heading">
+          Buy tickets
+          </h2>
+        </div>
+        <div class="tickets__row">
+          <div class="tickets__column">
+            <div class="tickets__picture"></div>
+          </div>
+          <div class="tickets__column">
+            <form action="#" class="tickets__form form">
+              <div class="form__column">
+                <h3 class="form__heading-left">
+                  Ticket Type
+                </h3>
+                <div class="form__radio-options">
+                  <div class="form__form-group">
+                    <label for="permanentExhibition" class="form__radio-label">Permanent exhibition
+                      <input type="radio" class="form__radio" name="ticketType" id="permanentExhibition" checked>
+                      <span class="form__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="form__form-group">
+                    <label for="temporaryExhibition" class="form__radio-label">Temporary exhibition
+                      <input type="radio" class="form__radio" name="ticketType" id="temporaryExhibition">
+                      <span class="form__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="form__form-group">
+                    <label for="combinedAdmission" class="form__radio-label">Combined Admission
+                      <input type="radio" class="form__radio" name="ticketType" id="combinedAdmission">
+                      <span class="form__checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__column">
+                <h3 class="form__heading-right">
+                  Amount
+                </h3>
+                <div class="form__number-input-options">
+                  <div class="form__form-group-number-top">
+                    <label class="form__number-label">Basic 18+</label>
+                    <div class="form__number-field-container number-field-container">
+                      <button class="number-field-container__item button">-</button>
+                      <input type="number" class="form__number-input" name="basicUnderOr18" id="basicUnderOr18" readonly value="1">
+                      <button class="number-field-container__item button">+</button>
+                    </div>
+                  </div>
+                  <div class="form__form-group-number-bottom">
+                    <label class="form__number-label">Senior 65+</label>
+                    <div class="form__number-field-container number-field-container">
+                      <button class="number-field-container__item button">-</button>
+                      <input type="number" class="form__number-input" name="seniorUnderOr65" id="seniorUnderOr65" value="1">
+                      <button class="number-field-container__item button">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__bottom">
+                  <p class="form__total-price">
+                    Total €220
+                  </p>
+                  <button type="submit" class="form__button button">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
