@@ -1,0 +1,54 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.footer {
+  padding: 75px 0;
+  background-color: $black-background-color;
+
+  &__container {
+    @include row-flexbox(normal, space-between);
+  }
+
+  &__logo {
+    height: 50px;
+    width: 195px;
+    background-image: url("../assets/svg/01_logo.svg");
+  }
+
+  &__navbar {
+    margin-right: auto;
+    margin-left: 135px;
+    width: 32.4%;
+  }
+
+  &__social-navigation {
+    margin-top: auto;
+    margin-bottom: 8px;
+    width: 23%;
+  }
+
+  .social-navigation {
+    &__list {
+      @include row-flexbox(normal, space-between);
+    }
+
+    &__item {
+      @include row-flexbox(center, center);
+
+      height: 48px;
+      width: 48px;
+      border: 1px solid $light-gray-color;
+      border-radius: 50%;
+    }
+  }
+
+  .menu {
+    &__item {
+      width: 45%;
+
+      &_left {
+        text-align: left;
+      }
+    }
+  }
+}
