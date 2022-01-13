@@ -48,4 +48,12 @@
   &__item:not(:last-child) {
     margin-bottom: 20px;
   }
+
+  &__link {
+    transition: all 1s;
+
+    &:hover {
+      color: $heading-color;
+    }
+  }
 }

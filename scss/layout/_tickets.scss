@@ -27,7 +27,6 @@
   &__picture {
     height: 550px;
     width: 100%;
-    background-image: url("../../assets/img/05_Tickets_section/01_item.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -156,5 +155,9 @@
 .number-field-container {
   &__item {
     @include text (inherit, $subheading-font-size, 1.15, $normal-font-weight, inherit, center);
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }

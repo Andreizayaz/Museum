@@ -4,4 +4,11 @@
 .link {
   @include text($link-color, $link-font-size,
   $link-line-height, $extra-light-font-weight, inherit, center, none, $normal-letter-spacing);
+
+  transition: color 1s;
+
+  &:hover,
+  &:active {
+    color: $heading-color;
+  }
 }

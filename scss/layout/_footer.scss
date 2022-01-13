@@ -33,12 +33,23 @@
     }
 
     &__item {
-      @include row-flexbox(center, center);
-
       height: 48px;
       width: 48px;
       border: 1px solid $light-gray-color;
       border-radius: 50%;
+      transition: all 1s;
+
+      &:hover {
+        background-color: $heading-color;
+        border-color: $heading-color;
+      }
+    }
+
+    &__link {
+      @include row-flexbox(center, center);
+
+      height: 100%;
+      width: 100%;
     }
   }
 
