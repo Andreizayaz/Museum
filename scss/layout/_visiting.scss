@@ -2,6 +2,9 @@
 @import "../abstracts/variables";
 
 .visiting {
+  padding: 75px 0;
+  padding-bottom: 74px;
+
   &__container {
     @include column-flexbox;
   }
@@ -33,7 +36,7 @@
 
 .item {
   &__image {
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     height: 285px;
     width: 100%;
   }

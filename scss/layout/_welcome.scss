@@ -10,11 +10,15 @@
     z-index: 1;
     width: 41.5%;
     padding-top: 114px;
-    padding-bottom: 240px;
+    padding-bottom: 247px;
   }
 
   &__heading {
     margin-bottom: 26px;
+
+    &::after {
+      display: none;
+    }
   }
 
   &__text {
@@ -23,7 +27,7 @@
 
   &__button {
     display: inline-block;
-    padding: 29px 65px;
+    padding: 25px 65px;
   }
 
   &__column-2 {
@@ -33,6 +37,8 @@
     height: 100%;
     width: 63.3%;
     background-image: url("../assets/img/01_Background_images/01_welcome_section_background.png");
+    background-position: calc(100% - 0px) calc(100% - 0px);
+    background-repeat: no-repeat;
   }
 }
 
