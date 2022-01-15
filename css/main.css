@@ -1674,4 +1674,11 @@ section:nth-child(even) {
 .footer .menu__item_left {
   text-align: left;
 }
+
+.tour {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  border: none;
+}
 /*# sourceMappingURL=main.css.map */
