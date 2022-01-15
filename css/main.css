@@ -1020,12 +1020,13 @@ section:nth-child(even) {
 }
 
 .explore__picture {
+  position: relative;
   height: 700px;
   width: 100%;
 }
 
 .explore__row {
-  margin-top: 80px;
+  margin-top: 74px;
 }
 
 .picture-description {
@@ -1040,15 +1041,25 @@ section:nth-child(even) {
 }
 
 .picture-description__heading {
-  margin-bottom: 39px;
+  margin-bottom: 26px;
 }
 
 .picture-description__text:first-child {
-  margin-bottom: 11px;
+  margin-bottom: 25px;
 }
 
 .picture-description__highlight {
   color: #caaa7d;
+}
+
+.picture__none {
+  display: none;
+}
+
+.picture__slider {
+  position: absolute;
+  top: 0;
+  right: 257px;
 }
 
 /* stylelint-disable property-no-vendor-prefix */

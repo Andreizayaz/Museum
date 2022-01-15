@@ -18,12 +18,13 @@
   }
 
   &__picture {
+    position: relative;
     height: 700px;
     width: 100%;
   }
 
   &__row {
-    margin-top: 80px;
+    margin-top: 74px;
   }
 }
 
@@ -31,16 +32,28 @@
   @include text(inherit, $common-text-font-size, $common-text-line-height, $light-font-weight, inherit, left, none, 0);
 
   &__heading {
-    margin-bottom: 39px;
+    margin-bottom: 26px;
   }
 
   &__text {
     &:first-child {
-      margin-bottom: 11px;
+      margin-bottom: 25px;
     }
   }
 
   &__highlight {
     color: $highlight-text-color;
+  }
+}
+
+.picture {
+  &__none {
+    display: none;
+  }
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    right: 257px;
   }
 }
