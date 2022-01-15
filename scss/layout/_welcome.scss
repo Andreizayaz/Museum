@@ -3,13 +3,16 @@
 
 .welcome {
   &__container {
+    position: relative;
     @include row-flexbox(normal, normal);
+
+    padding-bottom: 25px;
   }
 
   &__column-1 {
     z-index: 1;
     width: 41.5%;
-    padding-top: 114px;
+    padding-top: 150px;
     padding-bottom: 247px;
   }
 
@@ -32,13 +35,96 @@
 
   &__column-2 {
     position: absolute;
+    right: 10px;
+    bottom: 0;
+    margin-left: auto;
+    height: 100%;
+    width: 69.5%;
+  }
+
+  &__slider {
+    position: relative;
+    padding-bottom: 60px;
+  }
+}
+
+.slider {
+  &__image {
+    height: 750px;
+    width: 100%;
+    background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url("../assets/img/08_Welcome_section/01_Welcome_slider/01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__pagination {
+    position: absolute;
     right: 0;
     bottom: 0;
-    height: 100%;
-    width: 63.3%;
-    background-image: url("../assets/img/01_Background_images/01_welcome_section_background.png");
-    background-position: calc(100% - 0px) calc(100% - 0px);
-    background-repeat: no-repeat;
+    width: 59%;
+    padding: 40px 74px;
+    background-color: $odd-section-background-color;
+  }
+}
+
+.pagination {
+  &__row {
+    @include row-flexbox(center, space-between);
+  }
+
+  &__numbers {
+    @include row-flexbox(center, space-between);
+
+    width: 16%;
+  }
+
+  &__carousel {
+    @include row-flexbox(center, space-between);
+
+    width: 40%;
+  }
+
+  &__arrows {
+    @include row-flexbox(center, space-between);
+
+    width: 18%;
+  }
+}
+
+.numbers {
+  @include text($white-color, $little-font-size, 1.82, $normal-font-weight, inherit, center, uppercase, 0);
+
+  &__current,
+  &__total {
+    display: block;
+    width: 33%;
+  }
+
+  &__current::after {
+    display: inline;
+    margin-left: 10px;
+    font-size: 15px;
+    border-right: 3px solid $white-color;
+    content: " ";
+  }
+}
+
+.carousel {
+  &__item {
+    height: 16px;
+    width: 16px;
+    background-color: $white-color;
+  }
+
+  &__item_active {
+    background-color: $medium-brown-color;
+  }
+}
+
+.arrows {
+  &__item {
+    display: block;
+    width: 38%;
   }
 }
 
