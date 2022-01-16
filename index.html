@@ -209,7 +209,7 @@
       </div>
     </section>
     <section class="video" id="video">
-      <div class="container">
+      <div class="video__container container">
         <div class="video__frame frame">
           <div class="frame__view">
             <button>
@@ -219,23 +219,17 @@
           <div class="frame__toolbar">
             <div class="frame__video-manage-container video-manage-container">
               <button class="video-manage-container__item">
-                <img src="assets/svg/02_Video_section/02_previous_btn.svg" alt="previous" title="previous">
-              </button>
-              <button class="video-manage-container__item">
                 <img src="assets/svg/02_Video_section/03_play_btn.svg" alt="play" title="play">
-              </button>
-              <button class="video-manage-container__item">
-                <img src="assets/svg/02_Video_section/04_next_btn.svg" alt="next" title="next">
               </button>
             </div>
             <div class="frame__video-progress">
-              <input type="range" class="frame__video-progress-range" value="47" min="0" max="100" step="1">
+              <input type="range" class="frame__video-progress-range" value="54" min="0" max="100" step="1">
             </div>
             <div class="frame__volume-progress volume-progress">
               <button class="volume-progress__item">
                 <img src="assets/svg/02_Video_section/05_volume_icon.svg" alt="volume" title="volume">
               </button>
-              <input type="range" class="frame__volume-progress-range volume-progress__item" value="43" min="0" max="100" step="1">
+              <input type="range" class="frame__volume-progress-range volume-progress__item" value="45" min="0" max="100" step="1">
             </div>
             <div class="frame__resize-screen">
               <button>
@@ -245,17 +239,45 @@
           </div>
         </div>
         <div class="video__row">
-        <div class="video__column">
-          <h2 class="video__heading">
-            Video journey
-          </h2>
+          <div class="video__column">
+            <h2 class="video__heading">
+              Video journey
+            </h2>
+          </div>
+          <div class="video__column">
+            <p class="video__description">
+              Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
+            </p>
+          </div>
         </div>
-        <div class="video__column">
-          <p class="video__description">
-            Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
-          </p>
+        <div class="video__slider-for-video slider-for-video">
+          <div class="slider-for-video__video-list video-list">
+            <div class="video-list__item">
+              <iframe class="video-list__frame" src="https://www.youtube-nocookie.com/embed/aWmJ5DgyWPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-list__item">
+              <iframe class="video-list__frame" src="https://www.youtube-nocookie.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-list__item">
+              <iframe class="video-list__frame" src="https://www.youtube-nocookie.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="slider-for-video__video-pagination video-pagination">
+            <button class="video-pagination__previous">
+              <img src="assets/svg/02_Video_section/07_Slider_icons/01_left_arrow_icon.svg" alt="left arrow icon" title="previous">
+            </button>
+            <div class="video-pagination__video-carousel video-carousel">
+              <button class="video-carousel__item video-carousel__item_active"></button>
+              <button class="video-carousel__item"></button>
+              <button class="video-carousel__item"></button>
+              <button class="video-carousel__item"></button>
+              <button class="video-carousel__item"></button>
+            </div>
+            <button class="video-pagination__next">
+              <img src="assets/svg/02_Video_section/07_Slider_icons/02_right_arrow_icon.svg" alt="right arrow icon" title="next">
+            </button>
+          </div>
         </div>
-      </div>
       </div>
     </section>
     <section class="tickets" id="tickets">

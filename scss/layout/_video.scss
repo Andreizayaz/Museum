@@ -3,15 +3,23 @@
 @import "../abstracts/variables";
 
 .video {
-  padding: 90px 0 75px;
+  padding: 79px 0 75px;
+
+  &__container {
+    @include row-flexbox;
+  }
 
   &__frame {
+    order: 1;
     margin-bottom: 41px;
     width: 100%;
   }
 
   &__row {
     @include row-flexbox(flex-start, space-between);
+
+    order: 0;
+    margin-bottom: 69px;
   }
 
   &__column {
@@ -35,13 +43,18 @@
   &__description {
     @include text($even-section-color, $common-text-font-size, 1.77, $light-font-weight, inherit, left, none, 0);
   }
+
+  &__slider-for-video {
+    order: 2;
+    width: 100%;
+  }
 }
 
 .frame {
   &__view {
     @include row-flexbox;
 
-    height: 629px;
+    height: 650px;
     width: 100%;
     background-image: url("../../assets/img/04_Video_section/01_Video_poster.png");
     background-repeat: no-repeat;
@@ -51,14 +64,14 @@
   &__toolbar {
     @include row-flexbox(normal, space-between);
 
-    padding: 0 41px;
+    padding: 0 30px;
     background-color: $even-section-color;
   }
 
   &__video-manage-container {
     @include row-flexbox(center, space-between);
 
-    width: 12%;
+    width: 23px;
   }
 
   &__video-manage-container,
@@ -69,14 +82,14 @@
   }
 
   &__video-progress {
-    width: 60.4%;
+    width: 67%;
     padding: 35px 0;
   }
 
   &__video-progress-range {
     height: 8px;
     width: 100%;
-    background: linear-gradient(to right, $fill-gradient-color 0%, $fill-gradient-color 47%, $blank-gradient-color 47%, $blank-gradient-color 100%);
+    background: linear-gradient(to right, $fill-gradient-color 0%, $fill-gradient-color 54%, $blank-gradient-color 54%, $blank-gradient-color 100%);
     border: none;
     outline: none;
     -webkit-appearance: none;
@@ -94,7 +107,7 @@
   &__volume-progress {
     @include row-flexbox(center, space-between);
 
-    width: 15.7%;
+    width: 17%;
     padding: 28px 0;
 
     &__item {
@@ -104,8 +117,8 @@
 
   &__volume-progress-range {
     height: 8px;
-    width: 72.7%;
-    background: linear-gradient(to right, $fill-gradient-color 0%, $fill-gradient-color 43%, $blank-gradient-color 43%, $blank-gradient-color 100%);
+    width: 64%;
+    background: linear-gradient(to right, $fill-gradient-color 0%, $fill-gradient-color 45%, $blank-gradient-color 45%, $blank-gradient-color 100%);
     border: none;
     outline: none;
     -webkit-appearance: none;
@@ -130,5 +143,61 @@
 
   &__item {
     gap: 41px;
+  }
+}
+
+.slider-for-video {
+  &__video-list {
+    @include row-flexbox(center, space-between);
+
+    margin-bottom: 40px;
+  }
+
+  &__video-pagination {
+    @include row-flexbox(center, space-between);
+
+    margin: 0 auto;
+    width: 14%;
+  }
+}
+
+.video-list {
+  &__item {
+    height: 254px;
+    width: 31.4%;
+  }
+
+  &__frame {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.video-pagination {
+  &__previous,
+  &__next {
+    @include row-flexbox(center, center);
+    height: 12px;
+    width: 12px;
+  }
+
+  &__video-carousel {
+    @include row-flexbox(center, space-between);
+
+    width: 70%;
+  }
+}
+
+.video-carousel {
+  &__item {
+    height: 12px;
+    width: 12px;
+    background-color: $video-pagination-item;
+    border-radius: 50%;
+
+    &_active {
+      background-color: $video-pagination-active-item;
+    }
   }
 }
