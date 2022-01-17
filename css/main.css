@@ -519,7 +519,7 @@ input[type="range"] {
   cursor: pointer;
 }
 
-section:not(.welcome):not(.video):not(.visiting) {
+section:not(.welcome):not(.video):not(.visiting):not(.gallery) {
   padding: 75px 0;
 }
 
@@ -1378,6 +1378,70 @@ section:nth-child(even) {
 
 .video-carousel__item_active {
   background-color: #333;
+}
+
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable scss/operator-no-unspaced */
+/* fonts */
+/* colors */
+/* colors variables assignment */
+.gallery {
+  padding: 75px 0;
+  padding-bottom: 0;
+}
+
+.gallery__heading {
+  margin-bottom: 75px;
+  color: #fff;
+  font-family: Forum, serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.gallery__outer-container {
+  height: 1960px;
+  overflow: hidden;
+}
+
+.gallery__inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 36px;
+          column-gap: 36px;
+  row-gap: 24px;
+}
+
+.inner-container__column {
+  width: 31.8%;
+}
+
+.inner-container__column:nth-child(2n+1) {
+  margin-top: 51px;
+}
+
+.inner-container__item {
+  margin-bottom: 23px;
+  width: 100%;
+}
+
+.inner-container__item:nth-child(n+13) {
+  margin-bottom: 0;
 }
 
 /* stylelint-disable declaration-no-important */

@@ -1,0 +1,43 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.gallery {
+  padding: 75px 0;
+  padding-bottom: 0;
+
+  &__heading {
+    margin-bottom: 75px;
+    @include text($odd-section-color, $section-heading-font-size, $section-heading-line-height, $normal-font-weight, (Forum, serif), left, uppercase, $heading-letter-spacing);
+  }
+
+  &__outer-container {
+    height: 1960px;
+    overflow: hidden;
+  }
+
+  &__inner-container {
+    @include row-flexbox(normal, space-between);
+
+    column-gap: 36px;
+    row-gap: 24px;
+  }
+}
+
+.inner-container {
+  &__column {
+    width: 31.8%;
+
+    &:nth-child(2n+1) {
+      margin-top: 51px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 23px;
+    width: 100%;
+
+    &:nth-child(n+13) {
+      margin-bottom: 0;
+    }
+  }
+}
