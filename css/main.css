@@ -1472,6 +1472,10 @@ section:nth-child(even) {
           justify-content: space-between;
 }
 
+.tickets__heading {
+  color: #9d8665;
+}
+
 .tickets__column:first-child {
   width: 50%;
 }
@@ -1528,7 +1532,7 @@ section:nth-child(even) {
 
 .form__form-group {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 27px;
   padding-left: 40px;
 }
 
@@ -1570,7 +1574,7 @@ section:nth-child(even) {
           justify-content: center;
   height: 17px;
   width: 17px;
-  border: 2px solid #fff;
+  border: 2px solid #000;
   border-radius: 50%;
 }
 
@@ -1579,7 +1583,7 @@ section:nth-child(even) {
   display: none;
   height: 7px;
   width: 7px;
-  background-color: #fff;
+  background-color: #000;
   border-radius: 50%;
   content: "";
 }
@@ -1594,8 +1598,8 @@ section:nth-child(even) {
 }
 
 .form__form-group-number-top {
-  margin-top: 11px;
-  margin-bottom: 34px;
+  margin-top: 27px;
+  margin-bottom: 14px;
 }
 
 .form__number-label {
@@ -1627,7 +1631,7 @@ section:nth-child(even) {
           justify-content: space-between;
   width: 100%;
   padding: 4px 12px;
-  border: 3px solid #fff;
+  border: 3px solid #000;
 }
 
 .form__number-input {
@@ -1646,6 +1650,7 @@ section:nth-child(even) {
 
 .form__total-price {
   margin: 50px 0;
+  margin-bottom: 60px;
   color: inherit;
   font-family: inherit;
   font-size: 28px;
@@ -1659,7 +1664,7 @@ section:nth-child(even) {
 .form__button {
   padding: 11px 37px;
   padding-bottom: 16px;
-  color: #000;
+  color: #fff;
   font-family: inherit;
   font-size: 22px;
   font-weight: 300;
@@ -1667,7 +1672,7 @@ section:nth-child(even) {
   letter-spacing: 2px;
   text-align: center;
   text-transform: none;
-  background-color: #fff;
+  background-color: #000;
   border-radius: 2px;
 }
 

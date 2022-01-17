@@ -14,6 +14,10 @@
     }
   }
 
+  &__heading {
+    color: $heading-color;
+  }
+
   &__column {
     &:first-child {
       width: 50%;
@@ -58,7 +62,7 @@
 
   &__form-group {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 27px;
     padding-left: 40px;
   }
 
@@ -88,7 +92,7 @@
     justify-content: center;
     height: 17px;
     width: 17px;
-    border: 2px solid $odd-section-color;
+    border: 2px solid $even-section-color;
     border-radius: 50%;
 
     &::after {
@@ -96,7 +100,7 @@
       display: none;
       height: 7px;
       width: 7px;
-      background-color: $odd-section-color;
+      background-color: $even-section-color;
       border-radius: 50%;
       content: "";
     }
@@ -112,8 +116,8 @@
   }
 
   &__form-group-number-top {
-    margin-top: 11px;
-    margin-bottom: 34px;
+    margin-top: 27px;
+    margin-bottom: 14px;
   }
 
   &__number-label {
@@ -127,7 +131,7 @@
 
     width: 100%;
     padding: 4px 12px;
-    border: 3px solid $odd-section-color;
+    border: 3px solid $even-section-color;
   }
 
   &__number-input {
@@ -140,15 +144,16 @@
 
   &__total-price {
     margin: 50px 0;
+    margin-bottom: 60px;
     @include text(inherit, $normal-font-size, $normal-line-height, $bold-font-weight, inherit, right, none, 1.65px);
   }
 
   &__button {
     padding: 11px 37px;
     padding-bottom: 16px;
-    @include text($even-section-color, $common-text-font-size, $little-line-height, $light-font-weight, inherit, center,);
+    @include text($odd-section-color, $common-text-font-size, $little-line-height, $light-font-weight, inherit, center,);
 
-    background-color: $odd-section-color;
+    background-color: $even-section-color;
     border-radius: 2px;
   }
 }
