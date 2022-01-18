@@ -677,6 +677,11 @@ section:nth-child(even) {
   position: relative;
 }
 
+.main__parallax {
+  height: 400px;
+  width: 100%;
+}
+
 /* stylelint-disable no-eol-whitespace */
 /* stylelint-disable at-rule-no-unknown */
 /* stylelint-disable scss/operator-no-unspaced */
@@ -1689,6 +1694,13 @@ section:nth-child(even) {
 
 .number-field-container__item:hover {
   background-color: transparent;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-image: url("../../assets/img/09_Parallax_section/01_parallax.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* stylelint-disable no-eol-whitespace */
