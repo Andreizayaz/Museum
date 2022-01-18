@@ -11,4 +11,8 @@
   &:active {
     color: $heading-color;
   }
+
+  &:active {
+    background-color: $blink-brown-color;
+  }
 }

@@ -607,6 +607,10 @@ section:nth-child(even) {
   color: #9d8665;
 }
 
+.link:active {
+  background-color: #7e6c51;
+}
+
 /* stylelint-disable no-eol-whitespace */
 /* stylelint-disable at-rule-no-unknown */
 .menu {
@@ -857,15 +861,48 @@ section:nth-child(even) {
   height: 16px;
   width: 16px;
   background-color: #fff;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.carousel__item:hover {
+  background-color: #9d8665;
 }
 
 .carousel__item_active {
   background-color: #d2b183;
 }
 
-.arrows__item {
-  display: block;
-  width: 38%;
+.arrows {
+  /*&__item {
+    display: block;
+    width: 38%;
+  }*/
+}
+
+.arrows__left, .arrows__right {
+  height: 18px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.arrows__left {
+  background-image: url("../assets/svg/04_Welcome_section/01_Arrow_left.svg");
+}
+
+.arrows__left:hover {
+  background-image: url("../../assets/svg/04_Welcome_section/03_Hover_effect/01_Arrow_hover_left.svg");
+}
+
+.arrows__right {
+  background-image: url("../assets/svg/04_Welcome_section/02_Arrow_right.svg");
+}
+
+.arrows__right:hover {
+  background-image: url("../../assets/svg/04_Welcome_section/03_Hover_effect/02_Arrow_hover_right.svg");
 }
 
 .text {
@@ -1172,9 +1209,23 @@ section:nth-child(even) {
           justify-content: center;
   height: 650px;
   width: 100%;
-  background-image: url("../../assets/img/04_Video_section/01_Video_poster.png");
+  background-image: url("../assets/img/04_Video_section/01_Video_poster.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.frame__main-play {
+  height: 220px;
+  width: 220px;
+  background-image: url("../assets/svg/02_Video_section/01_Main_play.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.frame__main-play:hover {
+  opacity: .5;
 }
 
 .frame__toolbar {
@@ -1258,10 +1309,6 @@ section:nth-child(even) {
   padding: 28px 0;
 }
 
-.frame__volume-progress__item {
-  gap: 20px;
-}
-
 .frame__volume-progress-range {
   height: 8px;
   width: 64%;
@@ -1285,12 +1332,35 @@ section:nth-child(even) {
   padding: 25px 0;
 }
 
+.frame__resize-screen-button {
+  height: 36px;
+  width: 36px;
+  background-image: url("../assets/svg/02_Video_section/06_screen_resize_icon.svg");
+  background-repeat: no-repeat;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.frame__resize-screen-button:hover {
+  opacity: .5;
+}
+
 .video-manage-container {
   padding: 28px 0;
 }
 
 .video-manage-container__item {
+  height: 30px;
+  width: 23px;
   gap: 41px;
+  background-image: url("../assets/svg/02_Video_section/03_play_btn.svg");
+  background-repeat: no-repeat;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.video-manage-container__item:hover {
+  opacity: .5;
 }
 
 .slider-for-video__video-list {
@@ -1328,6 +1398,20 @@ section:nth-child(even) {
   width: 14%;
 }
 
+.volume-progress__item {
+  height: 30px;
+  width: 38px;
+  gap: 20px;
+  background-image: url("../assets/svg/02_Video_section/05_volume_icon.svg");
+  background-repeat: no-repeat;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.volume-progress__item:hover {
+  opacity: .5;
+}
+
 .video-list__item {
   height: 254px;
   width: 31.4%;
@@ -1355,6 +1439,26 @@ section:nth-child(even) {
           justify-content: center;
   height: 12px;
   width: 12px;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.video-pagination__previous {
+  background-image: url("../assets/svg/02_Video_section/07_Slider_icons/01_left_arrow_icon.svg");
+}
+
+.video-pagination__previous:hover {
+  background-image: url("../assets/svg/02_Video_section/08_Hover_effect/03_left_arrow_hover_icon.svg");
+}
+
+.video-pagination__next {
+  background-image: url("../assets/svg/02_Video_section/07_Slider_icons/02_right_arrow_icon.svg");
+}
+
+.video-pagination__next:hover {
+  background-image: url("../../assets/svg/02_Video_section/08_Hover_effect/02_right_arrow_hover_icon.svg");
 }
 
 .video-pagination__video-carousel {
@@ -1379,6 +1483,12 @@ section:nth-child(even) {
   width: 12px;
   background-color: #999;
   border-radius: 50%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.video-carousel__item:hover {
+  background-color: #710707;
 }
 
 .video-carousel__item_active {
@@ -1679,6 +1789,10 @@ section:nth-child(even) {
   text-transform: none;
   background-color: #000;
   border-radius: 2px;
+}
+
+.form__button:hover {
+  color: #000;
 }
 
 .number-field-container__item {

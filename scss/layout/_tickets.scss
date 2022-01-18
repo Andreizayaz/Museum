@@ -155,6 +155,10 @@
 
     background-color: $even-section-color;
     border-radius: 2px;
+
+    &:hover {
+      color: $black-color;
+    }
   }
 }
 

@@ -114,6 +114,11 @@
     height: 16px;
     width: 16px;
     background-color: $white-color;
+    transition: 1s all;
+
+    &:hover {
+      background-color: $light-brown-color;
+    }
   }
 
   &__item_active {
@@ -122,9 +127,34 @@
 }
 
 .arrows {
-  &__item {
+  /*&__item {
     display: block;
     width: 38%;
+  }*/
+
+  &__left,
+  &__right {
+    height: 18px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s all;
+  }
+
+  &__left {
+    background-image: url("../assets/svg/04_Welcome_section/01_Arrow_left.svg");
+
+    &:hover {
+      background-image: url("../../assets/svg/04_Welcome_section/03_Hover_effect/01_Arrow_hover_left.svg");
+    }
+  }
+
+  &__right {
+    background-image: url("../assets/svg/04_Welcome_section/02_Arrow_right.svg");
+
+    &:hover {
+      background-image: url("../../assets/svg/04_Welcome_section/03_Hover_effect/02_Arrow_hover_right.svg");
+    }
   }
 }
 
