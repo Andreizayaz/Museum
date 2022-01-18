@@ -1731,7 +1731,6 @@ section:nth-child(even) {
 
 .contacts__column:first-child {
   width: 21%;
-  padding-top: 15px;
 }
 
 .contacts__column:last-child {
@@ -1743,7 +1742,7 @@ section:nth-child(even) {
 }
 
 .contacts__subheading {
-  margin-bottom: 32px;
+  margin-bottom: 52px;
   width: 71%;
   color: inherit;
   font-family: inherit;
@@ -1776,7 +1775,7 @@ section:nth-child(even) {
 }
 
 .text-container__item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .text-container__link {

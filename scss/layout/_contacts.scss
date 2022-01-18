@@ -15,7 +15,6 @@
   &__column {
     &:first-child {
       width: 21%;
-      padding-top: 15px;
     }
 
     &:last-child {
@@ -28,7 +27,7 @@
   }
 
   &__subheading {
-    margin-bottom: 32px;
+    margin-bottom: 52px;
     width: 71%;
     @include text(inherit, $normal-font-size, $little-line-height, $medium-font-weight, inherit, left, none, 0);
   }
@@ -46,7 +45,7 @@
   @include text(inherit, $little-font-size, $little-line-height, $light-font-weight, inherit, left, none, 0);
 
   &__item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   &__link {
