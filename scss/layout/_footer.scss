@@ -2,8 +2,12 @@
 @import "../abstracts/variables";
 
 .footer {
-  padding: 75px 0;
   background-color: $black-background-color;
+
+  &__top {
+    padding: 76px 0 42px;
+    border-bottom: 3px solid $footer-top-border;
+  }
 
   &__container {
     @include row-flexbox(normal, space-between);
@@ -25,6 +29,11 @@
     margin-top: auto;
     margin-bottom: 12px;
     width: 23.3%;
+  }
+
+  &__bottom {
+    padding: 36px 0;
+    @include text($link-color, $link-font-size,$link-line-height, $extra-light-font-weight, inherit, center, none, $normal-letter-spacing);
   }
 
   .social-navigation {
@@ -61,5 +70,13 @@
         text-align: left;
       }
     }
+  }
+}
+
+.bottom {
+  &__copy,
+  &__company,
+  &__author {
+    width: fit-content;
   }
 }

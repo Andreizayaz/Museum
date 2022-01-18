@@ -1794,8 +1794,12 @@ section:nth-child(even) {
 /* colors */
 /* colors variables assignment */
 .footer {
-  padding: 75px 0;
   background-color: #030303;
+}
+
+.footer__top {
+  padding: 76px 0 42px;
+  border-bottom: 3px solid #666;
 }
 
 .footer__container {
@@ -1830,6 +1834,18 @@ section:nth-child(even) {
   margin-top: auto;
   margin-bottom: 12px;
   width: 23.3%;
+}
+
+.footer__bottom {
+  padding: 36px 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 2.27;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: none;
 }
 
 .footer .social-navigation__list {
@@ -1886,6 +1902,12 @@ section:nth-child(even) {
 
 .footer .menu__item_left {
   text-align: left;
+}
+
+.bottom__copy, .bottom__company, .bottom__author {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .tour {
