@@ -1,5 +1,6 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+@import "../abstracts/animation";
 
 .welcome {
   &__container {
@@ -10,7 +11,7 @@
   }
 
   &__column-1 {
-    z-index: 1;
+    z-index: 2;
     width: 41.5%;
     padding-top: 150px;
     padding-bottom: 247px;
@@ -49,12 +50,23 @@
 }
 
 .slider {
-  &__image {
+  &__content {
+    position: relative;
     height: 750px;
     width: 100%;
-    background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url("../assets/img/08_Welcome_section/01_Welcome_slider/01.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: block;
+      height: 100%;
+      width: 30.73%;
+      content: "";
+      background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 52.68%, rgba(0, 0, 0, 0) 100%);
+    }
   }
 
   &__pagination {
@@ -64,6 +76,25 @@
     width: 59%;
     padding: 40px 74px;
     background-color: $odd-section-background-color;
+  }
+}
+
+.content {
+  &__slide {
+    position: relative;
+    display: none;
+    height: 750px;
+    width: 100%;
+    animation: 1s ease-in-out;
+
+    &_active {
+      display: block;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -160,4 +191,31 @@
 
 .text {
   @include text(inherit, $normal-font-size, $normal-line-height, $light-font-weight);
+}
+
+/* classes for carousel animation*/
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
 }

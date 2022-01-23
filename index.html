@@ -53,7 +53,22 @@
         </div>
         <div class="welcome__column-2">
           <div class="welcome__slider slider">
-            <div class="slider__image" title="Monna Lisa">
+            <div class="slider__content content">
+              <div class="content__slide content__slide_active" title="Monna Lisa">
+                <img src="assets/img/08_Welcome_section/01_Welcome_slider/01.jpg" alt="Monna Lisa" title="Monna Lisa">
+              </div>
+              <div class="content__slide" title="Monna Lisa">
+                <img src="assets/img/08_Welcome_section/01_Welcome_slider/02.jpg" alt="Monna Lisa" title="Monna Lisa">
+              </div>
+              <div class="content__slide" title="Monna Lisa">
+                <img src="assets/img/08_Welcome_section/01_Welcome_slider/03.jpg" alt="Monna Lisa" title="Monna Lisa">
+              </div>
+              <div class="content__slide" title="Monna Lisa">
+                <img src="assets/img/08_Welcome_section/01_Welcome_slider/04.jpg" alt="Monna Lisa" title="Monna Lisa">
+              </div>
+              <div class="content__slide" title="Monna Lisa">
+                <img src="assets/img/08_Welcome_section/01_Welcome_slider/05.jpg" alt="Monna Lisa" title="Monna Lisa">
+              </div>
             </div>
             <div class="slider__pagination pagination">
               <div class="pagination__row">
@@ -80,7 +95,7 @@
         </div>
       </div>
     </section>
-    <section class="visiting" id="visiting">
+    <!-- <section class="visiting" id="visiting">
       <div class="container visiting__container">
         <div class="visiting__row">
           <h2 class="visiting__heading">
@@ -346,73 +361,78 @@
             </div>
           </div>
           <div class="tickets__column">
-            <form action="#" class="tickets__form form">
-              <div class="form__column">
-                <h3 class="form__heading-left">
+            <div class="tickets__subform subform">
+              <div class="subform__column">
+                <h3 class="subform__heading-left">
                   Ticket Type
                 </h3>
-                <div class="form__radio-options">
-                  <div class="form__form-group">
-                    <label for="permanentExhibition" class="form__radio-label">Permanent exhibition
-                      <input type="radio" class="form__radio" name="ticketType" id="permanentExhibition" checked>
-                      <span class="form__checkmark"></span>
+                <div class="subform__radio-options">
+                  <div class="subform__subform-group">
+                    <label for="permanentExhibition" class="subform__radio-label">Permanent exhibition
+                      <input type="radio" class="subform__radio" name="ticketType" id="permanentExhibition" checked>
+                      <span class="subform__checkmark"></span>
                     </label>
                   </div>
-                  <div class="form__form-group">
-                    <label for="temporaryExhibition" class="form__radio-label">Temporary exhibition
-                      <input type="radio" class="form__radio" name="ticketType" id="temporaryExhibition">
-                      <span class="form__checkmark"></span>
+                  <div class="subform__subform-group">
+                    <label for="temporaryExhibition" class="subform__radio-label">Temporary exhibition
+                      <input type="radio" class="subform__radio" name="ticketType" id="temporaryExhibition">
+                      <span class="subform__checkmark"></span>
                     </label>
                   </div>
-                  <div class="form__form-group">
-                    <label for="combinedAdmission" class="form__radio-label">Combined Admission
-                      <input type="radio" class="form__radio" name="ticketType" id="combinedAdmission">
-                      <span class="form__checkmark"></span>
+                  <div class="subform__subform-group">
+                    <label for="combinedAdmission" class="subform__radio-label">Combined Admission
+                      <input type="radio" class="subform__radio" name="ticketType" id="combinedAdmission">
+                      <span class="subform__checkmark"></span>
                     </label>
                   </div>
                 </div>
               </div>
-              <div class="form__column">
-                <h3 class="form__heading-right">
+              <div class="subform__column">
+                <h3 class="subform__heading-right">
                   Amount
                 </h3>
-                <div class="form__number-input-options">
-                  <div class="form__form-group-number-top">
-                    <label class="form__number-label">Basic 18+</label>
-                    <div class="form__number-field-container number-field-container">
+                <div class="subform__number-input-options">
+                  <div class="subform__subform-group-number-top">
+                    <label class="subform__number-label">Basic 18+</label>
+                    <div class="subform__number-field-container number-field-container">
                       <button class="number-field-container__item button">
                         <img src="assets/svg/03_Tickets/01_Minus_sign.svg" alt="decrement button" title="decrement">
                       </button>
-                      <input type="number" class="form__number-input" name="basicUnderOr18" id="basicUnderOr18" readonly value="1">
+                      <input type="number" class="subform__number-input" name="basicUnderOr18" id="basicUnderOr18" readonly value="1">
                       <button class="number-field-container__item button">
                         <img src="assets/svg/03_Tickets/02_Plus_sign.svg" alt="increment button" title="increment">
                       </button>
                     </div>
                   </div>
-                  <div class="form__form-group-number-bottom">
-                    <label class="form__number-label">Senior 65+</label>
-                    <div class="form__number-field-container number-field-container">
+                  <div class="subform__subform-group-number-bottom">
+                    <label class="subform__number-label">Senior 65+</label>
+                    <div class="subform__number-field-container number-field-container">
                       <button class="number-field-container__item button">
                         <img src="assets/svg/03_Tickets/01_Minus_sign.svg" alt="decrement button" title="decrement">
                       </button>
-                      <input type="number" class="form__number-input" name="seniorUnderOr65" id="seniorUnderOr65" value="1">
+                      <input type="number" class="subform__number-input" name="seniorUnderOr65" id="seniorUnderOr65" value="1">
                       <button class="number-field-container__item button">
                         <img src="assets/svg/03_Tickets/02_Plus_sign.svg" alt="increment button" title="increment">
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="form__bottom">
-                  <p class="form__total-price">
+                <div class="subform__bottom">
+                  <p class="subform__total-price">
                     Total €220
                   </p>
-                  <button type="submit" class="form__button button">
+                  <button type="submit" class="subform__button button">
                     Buy Now
                   </button>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="tickets__overlay">
+        <div class="tickets__wrapper">
+          
         </div>
       </div>
     </section>
@@ -444,9 +464,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="footer__top">
       <div class="container footer__container">
         <div class="footer__logo"></div>
@@ -516,6 +536,6 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 </body>   
 </html>
