@@ -25,6 +25,7 @@
         "arrow-parens": "off",
         "max-len": "off",
         "no-useless-return": "off",
-        "no-return-assign": "off"
+        "no-return-assign": "off",
+        "no-lonely-if": "off"
     }
 }

@@ -16,6 +16,14 @@ const welcomeCarousel = new WelcomeCarousel('.content__slide', '.numbers__curren
 
 paginationArrows.addEventListener('click', (e) => handleClick(e));
 paginationCarousel.addEventListener('click', (e) => handleClick(e));
+welcomeCarouselContent.addEventListener('mousedown', (e) => {
+  welcomeCarousel.mousedownSwipeHandler(e);
+  e.preventDefault();
+}, false);
+welcomeCarouselContent.addEventListener('mouseup', (e) => {
+  welcomeCarousel.mouseupSwipeHandler(e);
+  e.preventDefault();
+}, false);
 
 function renderWelcomeSlides(data) {
   const imagePath = 'assets/img/08_Welcome_section/01_Welcome_slider/';

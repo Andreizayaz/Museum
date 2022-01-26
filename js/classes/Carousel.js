@@ -11,6 +11,7 @@ export class Carousel {
       this.changeSlideByInterval();
     }, 3000);
     this.isClicked = false;
+    this.isSwiped = false;
   }
 
   changeCurrentItem(index) {
@@ -35,11 +36,18 @@ export class Carousel {
       this.classList.add('content__slide_active');
       that.dots[that.currentItem].classList.add('carousel__item_active');
       that.isEnabled = true;
-      if (that.isClicked) {
+      if (that.isClicked || that.isSwiped) {
         that.intervalId = setInterval(() => {
           that.changeSlideByInterval();
         }, 3000);
-        that.isClicked = false;
+
+        if (that.isClicked) {
+          that.isClicked = false;
+        }
+
+        if (that.isSwiped) {
+          that.isSwiped = false;
+        }
       }
     }, { once: true });
   }
@@ -65,7 +73,7 @@ export class Carousel {
     if (selectedItemIndex === currentActiveItemIndex) {
       return;
     }
-    
+
     switch (true) {
       case selectedItemIndex > currentActiveItemIndex:
         this.hideItem('to-left');
@@ -83,14 +91,51 @@ export class Carousel {
   }
 
   changeSlideByInterval() {
-    if (!this.isPaused) {
-      this.nextItem(this.currentItem);
-      this.changeCurrentSlideNumber();
-    }
+    this.nextItem(this.currentItem);
+    this.changeCurrentSlideNumber();
+    console.log(this.intervalId);
   }
 
   changeClickAndClearInterval() {
     this.isClicked = true;
     clearInterval(this.intervalId);
+  }
+
+  changeSwipeAndClearInterval() {
+    this.isSwiped = true;
+    clearInterval(this.intervalId);
+  }
+
+  mousedownSwipeHandler(e) {
+    this.startX = e.pageX;
+    this.startY = e.pageY;
+    this.startTime = new Date().getTime();
+    e.target.style.cursor = 'grabbing';
+  }
+
+  mouseupSwipeHandler(e) {
+    const threshold = 150;
+    const restraint = 100;
+    const allowedTime = 1000;
+    e.target.style.cursor = 'grab';
+
+    const distX = e.pageX - this.startX;
+    const distY = e.pageY - this.startY;
+    const elapsedTime = new Date().getTime() - this.startTime;
+    if (elapsedTime <= allowedTime) {
+      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+        if (distX > 0) {
+          if (this.isEnabled) {
+            this.previousItem(this.currentItem);
+            this.changeSwipeAndClearInterval();
+          }
+        } else {
+          if (this.isEnabled) {
+            this.nextItem(this.currentItem);
+            this.changeSwipeAndClearInterval();
+          }
+        }
+      }
+    }
   }
 }

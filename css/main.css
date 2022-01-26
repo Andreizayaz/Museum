@@ -828,6 +828,8 @@ section:nth-child(even) {
 .content__slide img {
   height: 100%;
   width: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .pagination__row {

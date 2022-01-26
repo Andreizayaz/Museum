@@ -86,7 +86,6 @@
     height: 750px;
     width: 100%;
     animation: 1s ease-in-out;
-    cursor: grab;
 
     &_active {
       display: block;
@@ -95,6 +94,7 @@
     img {
       height: 100%;
       width: 100%;
+      cursor: grab;
     }
   }
 }
