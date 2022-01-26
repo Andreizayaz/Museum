@@ -31,13 +31,11 @@
 .picture-description {
   @include text(inherit, $common-text-font-size, $common-text-line-height, $light-font-weight, inherit, left, none, 0);
 
-  &__heading {
-    margin-bottom: 26px;
-  }
-
   &__text {
-    &:first-child {
-      margin-bottom: 25px;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 

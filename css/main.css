@@ -1179,12 +1179,12 @@ section:nth-child(even) {
   text-transform: none;
 }
 
-.picture-description__heading {
-  margin-bottom: 26px;
+.picture-description__text {
+  margin-bottom: 25px;
 }
 
-.picture-description__text:first-child {
-  margin-bottom: 25px;
+.picture-description__text:last-child {
+  margin-bottom: 0;
 }
 
 .picture-description__highlight {

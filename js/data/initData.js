@@ -53,3 +53,12 @@ export const visitingSectionPicturesData = [
     title: 'Night Palace',
   },
 ];
+
+export const exploreSectionData = [
+  {
+    text: [
+      'Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.', 'It was cleaned in 1984 to remove a <strong class="picture-description__highlight">"yellow veil"</strong> of dust that had gathered since the previous restoration in the 19th century.', 'The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.'],
+    srcImageBefore: '01_before.jpg',
+    srcImageAfter: '02_after.jpg',
+  },
+];
