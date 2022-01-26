@@ -42,17 +42,18 @@ function handleClick({ target }) {
     case 'arrows__left':
       if (welcomeCarousel.isEnabled) {
         welcomeCarousel.previousItem(welcomeCarousel.currentItem);
-        //welcomeCarousel.changeCurrentSlideNumber();
+        welcomeCarousel.changeClickAndClearInterval();
       }
       break;
     case 'arrows__right':
       if (welcomeCarousel.isEnabled) {
         welcomeCarousel.nextItem(welcomeCarousel.currentItem);
-        //welcomeCarousel.changeCurrentSlideNumber();
+        welcomeCarousel.changeClickAndClearInterval();
       }
       break;
     case 'carousel__item':
       welcomeCarousel.changeSlide(paginationCarousel.children, target, 'carousel__item_active');
+      welcomeCarousel.changeClickAndClearInterval();
       break;
     default:
       break;

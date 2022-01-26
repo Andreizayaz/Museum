@@ -24,6 +24,7 @@
         "consistent-return": "off",
         "arrow-parens": "off",
         "max-len": "off",
-        "no-useless-return": "off"
+        "no-useless-return": "off",
+        "no-return-assign": "off"
     }
 }

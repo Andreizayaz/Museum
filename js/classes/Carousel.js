@@ -7,6 +7,10 @@ export class Carousel {
     this.dots = doc.querySelectorAll(`${dotsSelector}`);
     this.currentItem = 0;
     this.isEnabled = true;
+    this.intervalId = setInterval(() => {
+      this.changeSlideByInterval();
+    }, 3000);
+    this.isClicked = false;
   }
 
   changeCurrentItem(index) {
@@ -31,6 +35,12 @@ export class Carousel {
       this.classList.add('content__slide_active');
       that.dots[that.currentItem].classList.add('carousel__item_active');
       that.isEnabled = true;
+      if (that.isClicked) {
+        that.intervalId = setInterval(() => {
+          that.changeSlideByInterval();
+        }, 3000);
+        that.isClicked = false;
+      }
     }, { once: true });
   }
 
@@ -70,5 +80,17 @@ export class Carousel {
       default:
         break;
     }
+  }
+
+  changeSlideByInterval() {
+    if (!this.isPaused) {
+      this.nextItem(this.currentItem);
+      this.changeCurrentSlideNumber();
+    }
+  }
+
+  changeClickAndClearInterval() {
+    this.isClicked = true;
+    clearInterval(this.intervalId);
   }
 }
