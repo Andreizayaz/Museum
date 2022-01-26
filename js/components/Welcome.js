@@ -8,7 +8,7 @@ const paginationNumbers = doc.querySelector('.pagination__numbers');
 const paginationCarousel = doc.querySelector('.pagination__carousel');
 const paginationArrows = doc.querySelector('.pagination__arrows');
 
-render(welcomeCarouselContent, 'afterbegin', renderWelcomeSlides, welcomeCarouselData);
+render(welcomeCarouselContent, 'afterbegin', renderWelcomeSlides, welcomeCarouselData.sort(() => 0.5 - Math.random()));
 render(paginationNumbers, 'afterbegin', renderPaginationNumbers, welcomeCarouselData);
 render(paginationCarousel, 'afterbegin', renderCarouselItems, welcomeCarouselData);
 
@@ -29,7 +29,7 @@ function renderWelcomeSlides(data) {
   const imagePath = 'assets/img/08_Welcome_section/01_Welcome_slider/';
 
   return data.map((item, index) => `<div class="content__slide ${addClass(index, 'content__slide_active')}">
-                <img src=${imagePath + item.srcImage} alt="${item.alt}"  title="${item.title}">
+                <img src=${imagePath + item.srcImage} alt="${item.title}"  title="${item.title}">
               </div>`).join('');
 }
 
