@@ -4,7 +4,34 @@ import { visitingSectionPicturesData } from '../data/initData.js';
 
 const cardsContainer = doc.querySelector('.cards-container');
 
-render(cardsContainer, 'afterbegin', renderVisitingCards, visitingSectionPicturesData.sort(() => 0.5 - Math.random()));
+renderVisitingSectionContent();
+
+function workWithObserver() {
+  const options = {
+    threshold: [0.25],
+  };
+
+  function onEntry(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        render(cardsContainer, 'afterbegin', renderVisitingCards, visitingSectionPicturesData);
+        observer.unobserve(cardsContainer);
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(onEntry, options);
+
+  observer.observe(cardsContainer);
+}
+
+function renderVisitingSectionContent() {
+  if ('IntersectionObserver' in window) {
+    workWithObserver();
+  } else {
+    render(cardsContainer, 'afterbegin', renderVisitingCards, visitingSectionPicturesData);
+  }
+}
 
 function renderVisitingCards(data) {
   const rootPage = 'tours/';
@@ -14,7 +41,7 @@ function renderVisitingCards(data) {
     textBottom: 'Google Street Panorama View',
   };
 
-  return data.map(item => `<a href="${rootPage}${item.href}" class="cards-container__item item" target="_blank">
+  return data.map((item, index) => `<a href="${rootPage}${item.href}" class="cards-container__item item" target="_blank" style="animation: delight-display ${1 * (index + 1)}s forwards">
               <div class="item__image">
                 <img src="${imagePath}${item.srcImage}" alt="${item.title}" title="${item.title}">
               </div>

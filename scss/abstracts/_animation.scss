@@ -17,3 +17,13 @@
     left: 0;
   }
 }
+
+@keyframes delight-display {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -2,3 +2,4 @@
 import './Welcome.js';
 import './Visiting.js';
 import './Explore.js';
+import './Video.js';

@@ -727,6 +727,24 @@ section:nth-child(even) {
   }
 }
 
+@-webkit-keyframes delight-display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes delight-display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .welcome__container {
   position: relative;
   display: -webkit-box;
