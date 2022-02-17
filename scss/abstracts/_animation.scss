@@ -18,20 +18,6 @@
   }
 }
 
-@keyframes delight-display {
-  from {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: .5;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes left-30-and-none {
   from {
     left: 0;
@@ -75,5 +61,29 @@
   to {
     position: relative;
     left: 68;
+  }
+}
+
+@keyframes delight-display {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes full-width {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
   }
 }
