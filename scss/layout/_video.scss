@@ -181,6 +181,8 @@
     @include row-flexbox(center, space-between);
 
     margin-bottom: 40px;
+    height: 254px;
+    overflow: hidden;
   }
 
   &__video-pagination {
@@ -208,8 +210,14 @@
 
 .video-list {
   &__item {
+    position: relative;
+    display: none;
     height: 254px;
     width: 31.4%;
+
+    &_active {
+      display: block;
+    }
   }
 
   &__frame {

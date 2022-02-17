@@ -1,37 +1,10 @@
-import { render } from '../helpers/functions.js';
+import { renderDelayedContent } from '../helpers/functions.js';
 import { doc } from '../helpers/variables.js';
 import { visitingSectionPicturesData } from '../data/initData.js';
 
 const cardsContainer = doc.querySelector('.cards-container');
 
-renderVisitingSectionContent();
-
-function workWithObserver() {
-  const options = {
-    threshold: [0.25],
-  };
-
-  function onEntry(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        render(cardsContainer, 'afterbegin', renderVisitingCards, visitingSectionPicturesData);
-        observer.unobserve(cardsContainer);
-      }
-    });
-  }
-
-  const observer = new IntersectionObserver(onEntry, options);
-
-  observer.observe(cardsContainer);
-}
-
-function renderVisitingSectionContent() {
-  if ('IntersectionObserver' in window) {
-    workWithObserver();
-  } else {
-    render(cardsContainer, 'afterbegin', renderVisitingCards, visitingSectionPicturesData);
-  }
-}
+renderDelayedContent(0.25, cardsContainer, 'afterbegin', renderVisitingCards, visitingSectionPicturesData);
 
 function renderVisitingCards(data) {
   const rootPage = 'tours/';

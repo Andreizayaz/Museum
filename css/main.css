@@ -731,6 +731,9 @@ section:nth-child(even) {
   from {
     opacity: 0;
   }
+  50% {
+    opacity: .5;
+  }
   to {
     opacity: 1;
   }
@@ -740,8 +743,95 @@ section:nth-child(even) {
   from {
     opacity: 0;
   }
+  50% {
+    opacity: .5;
+  }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes left-30-and-none {
+  from {
+    left: 0;
+  }
+  to {
+    left: -32%;
+  }
+}
+
+@keyframes left-30-and-none {
+  from {
+    left: 0;
+  }
+  to {
+    left: -32%;
+  }
+}
+
+@-webkit-keyframes left-30 {
+  from {
+    position: absolute;
+    left: 34%;
+  }
+  to {
+    position: relative;
+    left: 0;
+  }
+}
+
+@keyframes left-30 {
+  from {
+    position: absolute;
+    left: 34%;
+  }
+  to {
+    position: relative;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes left-60 {
+  from {
+    position: absolute;
+    left: 68%;
+  }
+  to {
+    position: relative;
+    left: 34;
+  }
+}
+
+@keyframes left-60 {
+  from {
+    position: absolute;
+    left: 68%;
+  }
+  to {
+    position: relative;
+    left: 34;
+  }
+}
+
+@-webkit-keyframes left-100 {
+  from {
+    position: absolute;
+    left: 100%;
+  }
+  to {
+    position: relative;
+    left: 68;
+  }
+}
+
+@keyframes left-100 {
+  from {
+    position: absolute;
+    left: 100%;
+  }
+  to {
+    position: relative;
+    left: 68;
   }
 }
 
@@ -1493,6 +1583,8 @@ section:nth-child(even) {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px;
+  height: 254px;
+  overflow: hidden;
 }
 
 .slider-for-video__video-pagination {
@@ -1528,8 +1620,14 @@ section:nth-child(even) {
 }
 
 .video-list__item {
+  position: relative;
+  display: none;
   height: 254px;
   width: 31.4%;
+}
+
+.video-list__item_active {
+  display: block;
 }
 
 .video-list__frame {
@@ -1652,9 +1750,6 @@ section:nth-child(even) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-column-gap: 36px;
-          column-gap: 36px;
-  row-gap: 24px;
 }
 
 .inner-container__column {
@@ -1666,8 +1761,11 @@ section:nth-child(even) {
 }
 
 .inner-container__item {
+  display: block;
   margin-bottom: 23px;
   width: 100%;
+  -webkit-animation: delight-display 5s linear;
+          animation: delight-display 5s linear;
 }
 
 .inner-container__item:nth-child(n+13) {
