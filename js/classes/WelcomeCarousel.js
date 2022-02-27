@@ -14,4 +14,9 @@ export class WelcomeCarousel extends Carousel {
       that.currentSlideNumber.innerText = `${addZero(that.currentItem + 1)}`;
     }, { once: true });
   }
+
+  changeSlideByInterval() {
+    super.nextItem(this.currentItem);
+    this.changeCurrentSlideNumber();
+  }
 }

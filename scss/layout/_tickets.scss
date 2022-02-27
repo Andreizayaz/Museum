@@ -2,6 +2,7 @@
 /* stylelint-disable property-no-vendor-prefix */
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+@import "../abstracts/animation";
 
 .tickets {
   &__row {
@@ -20,7 +21,15 @@
 
   &__column {
     &:first-child {
+      position: relative;
+      height: 550px;
       width: 50%;
+      overflow: hidden;
+
+      .img {
+        height: 100%;
+        width: 100%;
+      }
     }
 
     &:last-child {
@@ -29,10 +38,13 @@
   }
 
   &__picture {
-    height: 550px;
+    position: relative;
+    display: none;
+    height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: 1s ease-in-out;
   }
 
   &__subform {
@@ -136,7 +148,7 @@
 
   &__number-input {
     display: block !important;
-    width: 30% !important;
+    width: 50% !important;
     @include text (inherit, ($little-font-size !important), ($normal-line-height !important), ($light-font-weight !important), inherit, (center !important));
 
     all: unset;
@@ -149,12 +161,14 @@
   }
 
   &__button {
+    position: relative;
     padding: 11px 37px;
     padding-bottom: 16px;
     @include text($odd-section-color, $common-text-font-size, $little-line-height, $light-font-weight, inherit, center,);
 
     background-color: $even-section-color;
     border-radius: 2px;
+    overflow: hidden;
 
     &:hover {
       color: $black-color;
@@ -166,8 +180,38 @@
   &__item {
     @include text (inherit, $subheading-font-size, 1.15, $normal-font-weight, inherit, center);
 
+    height: 36px;
+    width: 17px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:first-child {
+      background-image: url("../assets/svg/03_Tickets/01_Minus_sign.svg");
+    }
+
+    &:last-child {
+      background-image: url("../assets/svg/03_Tickets/02_Plus_sign.svg");
+    }
+
     &:hover {
       background-color: transparent;
     }
   }
+}
+
+.simple-span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
+  width: 0;
+  background-color: rgba(217, 211, 211, .7);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.ripple-effect {
+  animation: .5s ripple-animation linear;
 }

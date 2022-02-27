@@ -168,3 +168,34 @@ export const gallerySectionData = [
     href: 'https://www.sortiraparis.com/arts-culture/exposure/articles/247428-the-louvre-unveils-all-its-collections-online/lang/en',
   },
 ];
+
+export const ticketSectionImages = [
+  {
+    srcImage: '01_item.jpg',
+    title: 'Pompeo Batoni Aeneas',
+  },
+  {
+    srcImage: '02_item.jpg',
+    title: 'The Triumph of Venice',
+  },
+  {
+    srcImage: '03_item.jpg',
+    title: 'Peace and Justice',
+  },
+  {
+    srcImage: '04_item.jpg',
+    title: 'Diana and Cupid',
+  },
+  {
+    srcImage: '05_item.jpg',
+    title: 'Madonna and Child',
+  },
+  {
+    srcImage: '06_item.jpg',
+    title: 'Portrait_of_John_Talbot',
+  },
+  {
+    srcImage: '07_item.jpg',
+    title: 'Saint_Thomas',
+  },
+];

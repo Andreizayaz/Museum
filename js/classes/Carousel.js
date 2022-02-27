@@ -90,10 +90,14 @@ export class Carousel {
     }
   }
 
-  changeSlideByInterval() {
+  /* changeSlideByInterval() {
     this.nextItem(this.currentItem);
     this.changeCurrentSlideNumber();
     console.log(this.intervalId);
+  } */
+
+  changeSlideByInterval() {
+    this.nextItem(this.currentItem);
   }
 
   changeClickAndClearInterval() {

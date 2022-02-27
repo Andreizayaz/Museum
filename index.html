@@ -73,8 +73,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="visiting" id="visiting">
+    </section> -->
+    <!-- <section class="visiting" id="visiting">
       <div class="container visiting__container">
         <div class="visiting__row">
           <h2 class="visiting__heading">
@@ -147,7 +147,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <section class="gallery" id="gallery">
       <div class="container">
         <h3 class="gallery__heading">Art Gallery</h3>
@@ -155,7 +155,7 @@
           <div class="gallery__inner-container inner-container"></div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="tickets" id="tickets" style="background-color: white; color: black;">
       <div class="container">
         <div class="tickets__row">
@@ -164,10 +164,7 @@
           </h2>
         </div>
         <div class="tickets__row">
-          <div class="tickets__column">
-            <div class="tickets__picture">
-              <img src="assets/img/05_Tickets_section/01_item.jpg" alt="">
-            </div>
+          <div class="tickets__column tickets__carousel">
           </div>
           <div class="tickets__column">
             <div class="tickets__subform subform">
@@ -204,24 +201,20 @@
                   <div class="subform__subform-group-number-top">
                     <label class="subform__number-label">Basic 18+</label>
                     <div class="subform__number-field-container number-field-container">
-                      <button class="number-field-container__item button">
-                        <img src="assets/svg/03_Tickets/01_Minus_sign.svg" alt="decrement button" title="decrement">
+                      <button class="number-field-container__item button" name="decrement-18">
                       </button>
-                      <input type="number" class="subform__number-input" name="basicUnderOr18" id="basicUnderOr18" readonly value="1">
-                      <button class="number-field-container__item button">
-                        <img src="assets/svg/03_Tickets/02_Plus_sign.svg" alt="increment button" title="increment">
+                      <input type="number" class="subform__number-input" name="basicUnderOr18" id="basicUnderOr18" readonly value="0" min="0" max="20">
+                      <button class="number-field-container__item button" name="increment-18">
                       </button>
                     </div>
                   </div>
                   <div class="subform__subform-group-number-bottom">
                     <label class="subform__number-label">Senior 65+</label>
                     <div class="subform__number-field-container number-field-container">
-                      <button class="number-field-container__item button">
-                        <img src="assets/svg/03_Tickets/01_Minus_sign.svg" alt="decrement button" title="decrement">
+                      <button class="number-field-container__item button" name="decrement-65">
                       </button>
-                      <input type="number" class="subform__number-input" name="seniorUnderOr65" id="seniorUnderOr65" value="1">
-                      <button class="number-field-container__item button">
-                        <img src="assets/svg/03_Tickets/02_Plus_sign.svg" alt="increment button" title="increment">
+                      <input type="number" class="subform__number-input" name="seniorUnderOr65" id="seniorUnderOr65" value="0" min="0" max="20">
+                      <button class="number-field-container__item button" name="increment-65">
                       </button>
                     </div>
                   </div>
@@ -232,6 +225,7 @@
                   </p>
                   <button type="submit" class="subform__button button">
                     Buy Now
+                    <span class="simple-span"></span>
                   </button>
                 </div>
               </div>

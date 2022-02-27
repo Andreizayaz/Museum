@@ -87,3 +87,45 @@
     width: 100%;
   }
 }
+
+/* classes for carousel animation*/
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+}
+
+.content__slide_active {
+  display: block;
+}
+
+@keyframes ripple-animation {
+  from {
+    height: 0%;
+    width: 0%;
+  }
+  to {
+    height: 500px;
+    width: 500px;
+  }
+}

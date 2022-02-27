@@ -853,6 +853,62 @@ section:nth-child(even) {
   }
 }
 
+/* classes for carousel animation*/
+.to-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+}
+
+.from-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+}
+
+.to-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+  animation-direction: reverse;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+}
+
+.content__slide_active {
+  display: block;
+}
+
+@-webkit-keyframes ripple-animation {
+  from {
+    height: 0%;
+    width: 0%;
+  }
+  to {
+    height: 500px;
+    width: 500px;
+  }
+}
+
+@keyframes ripple-animation {
+  from {
+    height: 0%;
+    width: 0%;
+  }
+  to {
+    height: 500px;
+    width: 500px;
+  }
+}
+
 .welcome__container {
   position: relative;
   display: -webkit-box;
@@ -1109,25 +1165,21 @@ section:nth-child(even) {
 }
 
 /* classes for carousel animation*/
-.to-left {
-  -webkit-animation-name: left;
-          animation-name: left;
+/* .to-left {
+  animation-name: left;
 }
 
 .from-right {
-  -webkit-animation-name: right;
-          animation-name: right;
+  animation-name: right;
 }
 
 .to-right {
-  -webkit-animation-name: right;
-          animation-name: right;
+  animation-name: right;
   animation-direction: reverse;
 }
 
 .from-left {
-  -webkit-animation-name: left;
-          animation-name: left;
+  animation-name: left;
   animation-direction: reverse;
 }
 
@@ -1136,8 +1188,7 @@ section:nth-child(even) {
   top: 0;
   display: block;
   width: 100%;
-}
-
+} */
 /* stylelint-disable no-eol-whitespace */
 /* stylelint-disable at-rule-no-unknown */
 /* stylelint-disable scss/operator-no-unspaced */
@@ -1842,6 +1893,132 @@ section:nth-child(even) {
 /* fonts */
 /* colors */
 /* colors variables assignment */
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes left-30-and-none {
+  from {
+    left: 0;
+  }
+  to {
+    left: -32%;
+  }
+}
+
+@keyframes left-30 {
+  from {
+    position: absolute;
+    left: 34%;
+  }
+  to {
+    position: relative;
+    left: 0;
+  }
+}
+
+@keyframes left-60 {
+  from {
+    position: absolute;
+    left: 68%;
+  }
+  to {
+    position: relative;
+    left: 34;
+  }
+}
+
+@keyframes left-100 {
+  from {
+    position: absolute;
+    left: 100%;
+  }
+  to {
+    position: relative;
+    left: 68;
+  }
+}
+
+@keyframes delight-display {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes full-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* classes for carousel animation*/
+.to-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+}
+
+.from-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+}
+
+.to-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+  animation-direction: reverse;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+}
+
+.content__slide_active {
+  display: block;
+}
+
+@keyframes ripple-animation {
+  from {
+    height: 0%;
+    width: 0%;
+  }
+  to {
+    height: 500px;
+    width: 500px;
+  }
+}
+
 .tickets__row:first-child {
   margin-bottom: 75px;
 }
@@ -1867,7 +2044,15 @@ section:nth-child(even) {
 }
 
 .tickets__column:first-child {
+  position: relative;
+  height: 550px;
   width: 50%;
+  overflow: hidden;
+}
+
+.tickets__column:first-child .img {
+  height: 100%;
+  width: 100%;
 }
 
 .tickets__column:last-child {
@@ -1875,10 +2060,14 @@ section:nth-child(even) {
 }
 
 .tickets__picture {
-  height: 550px;
+  position: relative;
+  display: none;
+  height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-animation: 1s ease-in-out;
+          animation: 1s ease-in-out;
 }
 
 .tickets__subform {
@@ -2026,7 +2215,7 @@ section:nth-child(even) {
 
 .subform__number-input {
   display: block !important;
-  width: 30% !important;
+  width: 50% !important;
   color: inherit;
   font-family: inherit;
   font-size: 22px !important;
@@ -2052,6 +2241,7 @@ section:nth-child(even) {
 }
 
 .subform__button {
+  position: relative;
   padding: 11px 37px;
   padding-bottom: 16px;
   color: #fff;
@@ -2064,6 +2254,7 @@ section:nth-child(even) {
   text-transform: none;
   background-color: #000;
   border-radius: 2px;
+  overflow: hidden;
 }
 
 .subform__button:hover {
@@ -2079,10 +2270,41 @@ section:nth-child(even) {
   letter-spacing: 2px;
   text-align: center;
   text-transform: none;
+  height: 36px;
+  width: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.number-field-container__item:first-child {
+  background-image: url("../assets/svg/03_Tickets/01_Minus_sign.svg");
+}
+
+.number-field-container__item:last-child {
+  background-image: url("../assets/svg/03_Tickets/02_Plus_sign.svg");
 }
 
 .number-field-container__item:hover {
   background-color: transparent;
+}
+
+.simple-span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
+  width: 0;
+  background-color: rgba(217, 211, 211, 0.7);
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.ripple-effect {
+  -webkit-animation: .5s ripple-animation linear;
+          animation: .5s ripple-animation linear;
 }
 
 .parallax {
@@ -2304,5 +2526,131 @@ section:nth-child(even) {
   height: 100vh;
   width: 100vw;
   border: none;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes left-30-and-none {
+  from {
+    left: 0;
+  }
+  to {
+    left: -32%;
+  }
+}
+
+@keyframes left-30 {
+  from {
+    position: absolute;
+    left: 34%;
+  }
+  to {
+    position: relative;
+    left: 0;
+  }
+}
+
+@keyframes left-60 {
+  from {
+    position: absolute;
+    left: 68%;
+  }
+  to {
+    position: relative;
+    left: 34;
+  }
+}
+
+@keyframes left-100 {
+  from {
+    position: absolute;
+    left: 100%;
+  }
+  to {
+    position: relative;
+    left: 68;
+  }
+}
+
+@keyframes delight-display {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes full-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* classes for carousel animation*/
+.to-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+}
+
+.from-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+}
+
+.to-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+  animation-direction: reverse;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+}
+
+.content__slide_active {
+  display: block;
+}
+
+@keyframes ripple-animation {
+  from {
+    height: 0%;
+    width: 0%;
+  }
+  to {
+    height: 500px;
+    width: 500px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
