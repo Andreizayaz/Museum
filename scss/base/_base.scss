@@ -56,7 +56,7 @@ input[type="range"] {
 }
 
 section {
-  &:not(.welcome):not(.video):not(.visiting) {
+  &:not(.welcome):not(.video):not(.visiting):not(.gallery) {
     padding: 75px 0;
   }
 

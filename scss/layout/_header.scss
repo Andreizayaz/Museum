@@ -2,7 +2,7 @@
 @import "../abstracts/variables";
 
 .header {
-  padding: 75px 0;
+  padding: 50px 0;
   background-color: $black-background-color;
 
   &__container {
@@ -17,6 +17,6 @@
 
   &__navbar {
     margin-left: auto;
-    width: 51%;
+    width: 55%;
   }
 }

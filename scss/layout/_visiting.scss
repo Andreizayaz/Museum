@@ -25,11 +25,12 @@
 
   &__item {
     gap: 60px;
+    margin-bottom: 77px;
     width: 30.6%;
     cursor: pointer;
 
-    &:nth-child(-n+3) {
-      margin-bottom: 77px;
+    &:nth-last-child(-n+3) {
+      margin-bottom: 0;
     }
   }
 }

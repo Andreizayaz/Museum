@@ -1,0 +1,131 @@
+@keyframes left {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes left-30-and-none {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -32%;
+  }
+}
+
+@keyframes left-30 {
+  from {
+    position: absolute;
+    left: 34%;
+  }
+
+  to {
+    position: relative;
+    left: 0;
+  }
+}
+
+@keyframes left-60 {
+  from {
+    position: absolute;
+    left: 68%;
+  }
+
+  to {
+    position: relative;
+    left: 34;
+  }
+}
+
+@keyframes left-100 {
+  from {
+    position: absolute;
+    left: 100%;
+  }
+
+  to {
+    position: relative;
+    left: 68;
+  }
+}
+
+@keyframes delight-display {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes full-width {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* classes for carousel animation*/
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+}
+
+.content__slide_active {
+  display: block;
+}
+
+@keyframes ripple-animation {
+  from {
+    height: 0%;
+    width: 0%;
+  }
+  to {
+    height: 500px;
+    width: 500px;
+  }
+}

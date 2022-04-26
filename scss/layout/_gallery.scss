@@ -1,0 +1,76 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.gallery {
+  padding: 75px 0;
+  padding-bottom: 0;
+
+  &__heading {
+    margin-bottom: 75px;
+    @include text($odd-section-color, $section-heading-font-size, $section-heading-line-height, $normal-font-weight, (Forum, serif), left, uppercase, $heading-letter-spacing);
+  }
+
+  &__outer-container {
+    height: 1960px;
+    overflow: hidden;
+  }
+
+  &__inner-container {
+    @include row-flexbox(normal, space-between);
+  }
+}
+
+.inner-container {
+  &__column {
+    width: 31.8%;
+
+    &:nth-child(2n+1) {
+      margin-top: 51px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    margin-bottom: 23px;
+    width: 100%;
+    animation: delight-display 5s linear;
+    overflow: hidden;
+
+    &:nth-child(n+13) {
+      margin-bottom: 0;
+    }
+
+    &:hover .text-description {
+      left: 0;
+    }
+  }
+}
+
+.text-description {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-align: center;
+  background-color: rgba(128, 128, 128, .7);
+  transition: all 1s;
+
+  &__top {
+    margin-bottom: 30px;
+  }
+
+  &__bottom {
+    text-transform: uppercase;
+  }
+}

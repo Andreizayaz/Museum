@@ -2,6 +2,7 @@
 /* stylelint-disable property-no-vendor-prefix */
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+@import "../abstracts/animation";
 
 .tickets {
   &__row {
@@ -14,9 +15,21 @@
     }
   }
 
+  &__heading {
+    color: $heading-color;
+  }
+
   &__column {
     &:first-child {
+      position: relative;
+      height: 550px;
       width: 50%;
+      overflow: hidden;
+
+      .img {
+        height: 100%;
+        width: 100%;
+      }
     }
 
     &:last-child {
@@ -25,18 +38,21 @@
   }
 
   &__picture {
-    height: 550px;
+    position: relative;
+    display: none;
+    height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: 1s ease-in-out;
   }
 
-  &__form {
+  &__subform {
     @include row-flexbox(normal, space-between);
   }
 }
 
- .form {
+ .subform {
   &__column {
     &:first-child {
       width: 41%;
@@ -56,9 +72,9 @@
     margin-top: 50px;
   }
 
-  &__form-group {
+  &__subform-group {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 27px;
     padding-left: 40px;
   }
 
@@ -74,7 +90,7 @@
     cursor: pointer;
     opacity: 0;
 
-    &:checked ~ .form__checkmark::after {
+    &:checked ~ .subform__checkmark::after {
       display: block;
     }
   }
@@ -88,7 +104,7 @@
     justify-content: center;
     height: 17px;
     width: 17px;
-    border: 2px solid $odd-section-color;
+    border: 2px solid $even-section-color;
     border-radius: 50%;
 
     &::after {
@@ -96,7 +112,7 @@
       display: none;
       height: 7px;
       width: 7px;
-      background-color: $odd-section-color;
+      background-color: $even-section-color;
       border-radius: 50%;
       content: "";
     }
@@ -111,9 +127,9 @@
     width: 85.7%;
   }
 
-  &__form-group-number-top {
-    margin-top: 11px;
-    margin-bottom: 34px;
+  &__subform-group-number-top {
+    margin-top: 27px;
+    margin-bottom: 14px;
   }
 
   &__number-label {
@@ -127,12 +143,12 @@
 
     width: 100%;
     padding: 4px 12px;
-    border: 3px solid $odd-section-color;
+    border: 3px solid $even-section-color;
   }
 
   &__number-input {
     display: block !important;
-    width: 30% !important;
+    width: 50% !important;
     @include text (inherit, ($little-font-size !important), ($normal-line-height !important), ($light-font-weight !important), inherit, (center !important));
 
     all: unset;
@@ -140,16 +156,23 @@
 
   &__total-price {
     margin: 50px 0;
+    margin-bottom: 60px;
     @include text(inherit, $normal-font-size, $normal-line-height, $bold-font-weight, inherit, right, none, 1.65px);
   }
 
   &__button {
+    position: relative;
     padding: 11px 37px;
     padding-bottom: 16px;
-    @include text($even-section-color, $common-text-font-size, $little-line-height, $light-font-weight, inherit, center,);
+    @include text($odd-section-color, $common-text-font-size, $little-line-height, $light-font-weight, inherit, center,);
 
-    background-color: $odd-section-color;
+    background-color: $even-section-color;
     border-radius: 2px;
+    overflow: hidden;
+
+    &:hover {
+      color: $black-color;
+    }
   }
 }
 
@@ -157,8 +180,38 @@
   &__item {
     @include text (inherit, $subheading-font-size, 1.15, $normal-font-weight, inherit, center);
 
+    height: 36px;
+    width: 17px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:first-child {
+      background-image: url("../assets/svg/03_Tickets/01_Minus_sign.svg");
+    }
+
+    &:last-child {
+      background-image: url("../assets/svg/03_Tickets/02_Plus_sign.svg");
+    }
+
     &:hover {
       background-color: transparent;
     }
   }
+}
+
+.simple-span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
+  width: 0;
+  background-color: rgba(217, 211, 211, .7);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.ripple-effect {
+  animation: .5s ripple-animation linear;
 }

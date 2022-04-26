@@ -1,15 +1,19 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+@import "../abstracts/animation";
 
 .welcome {
   &__container {
+    position: relative;
     @include row-flexbox(normal, normal);
+
+    padding-bottom: 25px;
   }
 
   &__column-1 {
-    z-index: 1;
+    z-index: 2;
     width: 41.5%;
-    padding-top: 114px;
+    padding-top: 150px;
     padding-bottom: 247px;
   }
 
@@ -32,16 +36,187 @@
 
   &__column-2 {
     position: absolute;
+    right: 10px;
+    bottom: 0;
+    margin-left: auto;
+    height: 100%;
+    width: 69.5%;
+  }
+
+  &__slider {
+    position: relative;
+    padding-bottom: 60px;
+  }
+}
+
+.slider {
+  &__content {
+    position: relative;
+    height: 750px;
+    width: 100%;
+    overflow: hidden;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: block;
+      height: 100%;
+      width: 30.73%;
+      content: "";
+      background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 52.68%, rgba(0, 0, 0, 0) 100%);
+    }
+  }
+
+  &__pagination {
+    position: absolute;
     right: 0;
     bottom: 0;
-    height: 100%;
-    width: 63.3%;
-    background-image: url("../assets/img/01_Background_images/01_welcome_section_background.png");
-    background-position: calc(100% - 0px) calc(100% - 0px);
+    width: 59%;
+    padding: 40px 74px;
+    background-color: $odd-section-background-color;
+  }
+}
+
+.content {
+  &__slide {
+    position: relative;
+    display: none;
+    height: 750px;
+    width: 100%;
+    animation: 1s ease-in-out;
+
+    &_active {
+      display: block;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      cursor: grab;
+    }
+  }
+}
+
+.pagination {
+  &__row {
+    @include row-flexbox(center, space-between);
+  }
+
+  &__numbers {
+    @include row-flexbox(center, space-between);
+
+    width: 16%;
+  }
+
+  &__carousel {
+    @include row-flexbox(center, space-between);
+
+    width: 40%;
+  }
+
+  &__arrows {
+    @include row-flexbox(center, space-between);
+
+    width: 18%;
+  }
+}
+
+.numbers {
+  @include text($white-color, $little-font-size, 1.82, $normal-font-weight, inherit, center, uppercase, 0);
+
+  &__current,
+  &__total {
+    display: block;
+    width: 33%;
+  }
+
+  &__current::after {
+    display: inline;
+    margin-left: 10px;
+    font-size: 15px;
+    border-right: 3px solid $white-color;
+    content: " ";
+  }
+}
+
+.carousel {
+  &__item {
+    height: 16px;
+    width: 16px;
+    background-color: $white-color;
+    transition: 1s all;
+
+    &:hover {
+      background-color: $light-brown-color;
+    }
+  }
+
+  &__item_active {
+    background-color: $medium-brown-color;
+  }
+}
+
+.arrows {
+  /*&__item {
+    display: block;
+    width: 38%;
+  }*/
+
+  &__left,
+  &__right {
+    height: 18px;
+    width: 30px;
     background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s all;
+  }
+
+  &__left {
+    background-image: url("../assets/svg/04_Welcome_section/01_Arrow_left.svg");
+
+    &:hover {
+      background-image: url("../../assets/svg/04_Welcome_section/03_Hover_effect/01_Arrow_hover_left.svg");
+    }
+  }
+
+  &__right {
+    background-image: url("../assets/svg/04_Welcome_section/02_Arrow_right.svg");
+
+    &:hover {
+      background-image: url("../../assets/svg/04_Welcome_section/03_Hover_effect/02_Arrow_hover_right.svg");
+    }
   }
 }
 
 .text {
   @include text(inherit, $normal-font-size, $normal-line-height, $light-font-weight);
 }
+
+/* classes for carousel animation*/
+
+/* .to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+} */
